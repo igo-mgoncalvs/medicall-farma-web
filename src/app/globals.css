@@ -90,6 +90,9 @@ body {
   background: #fff;
 }
 
+.children {
+  margin-bottom: 49px;
+}
 
 @media (prefers-color-scheme: light) {
   html {

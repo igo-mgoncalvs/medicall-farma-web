@@ -23,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${montserrat.variable}`}>
         <Header />
-        {children}
+        <div className="children">
+          {children}
+        </div>
         <MenuMobile />
       </body>
     </html>

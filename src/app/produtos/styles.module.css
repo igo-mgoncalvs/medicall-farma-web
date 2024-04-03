@@ -23,14 +23,16 @@
   outline: none;
 }
 
+.product_group {
+  margin-left: 15px;
+}
+
 .products_list {
   display: flex;
-  padding: 0 15px;
   margin-bottom: 40px;
 }
 
 .products_title {
-  margin-left: 15px;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 18px;
