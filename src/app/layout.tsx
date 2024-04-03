@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
-import "./globals.css";
+
 import Header from "@/components/header";
+import MenuMobile from "@/components/menuMobile";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat', display: 'swap', });
@@ -21,6 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${montserrat.variable}`}>
         <Header />
         {children}
+        <MenuMobile />
       </body>
     </html>
   );
