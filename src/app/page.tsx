@@ -1,95 +1,197 @@
+'use client'
+
+import React, { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import styles from "./page.module.css";
+import 'swiper/css';
+import ContactForm from "@/components/form";
+
+const services_data = [
+  {
+    id: 0,
+    title: 'Entrega',
+    text: 'Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.',
+    icon: 'https://i.postimg.cc/yx46jcfT/Vector.png',
+    image: 'https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png',
+  },
+  {
+    id: 1,
+    title: 'Entrega',
+    text: 'Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.',
+    icon: 'https://i.postimg.cc/yx46jcfT/Vector.png',
+    image: 'https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png',
+  },
+  {
+    id: 2,
+    title: 'Entrega',
+    text: 'Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.',
+    icon: 'https://i.postimg.cc/yx46jcfT/Vector.png',
+    image: 'https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png',
+  },
+]
+
+const products_types = [
+  {
+    id: 0,
+    type: 'Medicamentos Hospitalares;'
+  },
+  {
+    id: 1,
+    type: 'Equipamentos Médicos e Odontológicos;'
+  },
+  {
+    id: 2,
+    type: 'Dietas Enterais e Parenterais;'
+  }
+]
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  const [activeSlide, setActiveSlide] = useState<Number>(0)
 
-      <div className={styles.center}>
+  console.log(activeSlide)
+
+  return (
+    <div>
+      <div className={styles.about_us}>
+        <div className={styles.infos_container}>
+          <div className={styles.text_container}>
+            <p className={styles.title}>Medicall Farma</p>
+            <p className={styles.text}>Há mais de 15 anos no mercado de vendas e distribuição de materiais médicos.</p>
+          </div>
+          <a className={styles.button}>Saber Mais</a>
+        </div>
+
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={'https://i.postimg.cc/fTjT2NCY/Rectangle-64-2.png'}
+          width={310}
+          height={205}
+          alt="banner-com-imagem-da-empresa"
+          className={styles.banner}
         />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      <div className={styles.welcome_container}>
+        <div className={styles.welcome_left_side}>
+          <h1 className={styles.welcome_title}>Bem vindo a 
+            <p className={styles.welcome_title_color}>Medicall Farma</p>
+          </h1>
+          <div className={styles.welcome_line_after} />
+          <p className={styles.welcome_text}>
+            Somos uma empresa de distribuição de materiais hospitalares há mais de 15 anos. Obtivemos um crescimento de 70% desde 2023.
           </p>
-        </a>
+          <div className={styles.welcome_line_before} />
+          <a className={styles.welcome_button}>Fale Conosco</a>
+        </div>
+
+        <Image
+          src={'https://i.postimg.cc/JzYTW5kr/Rectangle-40.png'}
+          width={140}
+          height={140}
+          alt="banner-com-imagem-da-empresa"
+          className={styles.welcome_image}
+        />
       </div>
-    </main>
+
+      <div className={styles.our_services_container}>
+        <p className={styles.our_services_title}>Nossos serviços</p>
+
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1.15}
+          className={styles.our_services_list}
+        >
+          {services_data.map(item => (
+            <SwiperSlide
+              key={item.id}
+              className={styles.mobile_service_item}
+            >
+              {({ isActive }) => {
+                if(isActive) {
+                  setActiveSlide(item.id) 
+                }
+                return (
+                  <>
+                    <Image 
+                      src={item.image}
+                      width={120}
+                      height={120}
+                      alt="icone-do-serviço"
+                      className={styles.mobile_service_image}
+                    />
+                    <div>
+                      <div className={styles.our_services_item_title}>
+                        <Image 
+                          src={item.icon}
+                          width={21}
+                          height={16}
+                          alt="icone-do-serviço"
+                        />
+                        <p>{item.title}</p>
+                      </div>
+                      <p className={styles.our_services_item_text}>{item.text}</p>
+                    </div>
+                  </>
+                )}}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className={styles.our_services_card_indicator_container}>
+          {services_data.map((item) => (
+            <div
+              key={item.id}
+              className={`${styles.our_services_card_indicator} ${activeSlide === item.id && styles.our_services_card_indicator_active}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.products_container}>
+        <p className={styles.products_title}>Tipos de Produtos</p>
+        <div className={styles.products_line} />
+        
+        <div className={styles.products_list}>
+          {products_types.map((item) => (
+            <p
+              key={item.id}
+              className={styles.products_list_item}
+            >
+              {item.type}
+            </p>
+          ))}
+        </div>
+
+        <a className={styles.products_button}>Conhecer Produtos</a>
+      </div>
+
+      <div className={styles.catalog_container}>
+        <div>
+          <p className={styles.catalog_title}>
+            Baixe nosso catálogo
+          </p>
+          <p className={styles.catalog_text}>
+            Confira nossa linha completa de produtos
+          </p>
+
+          <a className={styles.catalog_button}>Baixar</a>
+        </div>
+
+        <Image
+          src={'https://i.postimg.cc/6Qz8Zd84/Catalogo-celular-1.png'}
+          width={120}
+          height={154}
+          alt="imagem de referencia do catalogo"
+          className={styles.catalog_image}
+        />
+      </div>
+      
+      <div className={styles.contact_form_container}>
+        <p className={styles.contact_form_title}>Fale Conosco</p> 
+        
+        <ContactForm />
+      </div>
+    </div>
   );
 }
