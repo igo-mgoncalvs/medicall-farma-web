@@ -72,11 +72,15 @@
   align-items: center;
   gap: 8px;
   background-color: #15B370;
-  color: #fff;
   padding: 8px 18px;
   border-radius: 8px;
   font-size: 10px;
   font-weight: 600;
+  width: fit-content
+}
+
+.product_button_text {
+  color: #fff;
   text-decoration: none;
 }
 

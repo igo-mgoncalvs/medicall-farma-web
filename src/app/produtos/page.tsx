@@ -95,10 +95,8 @@ function Products () {
                 />
                 <p className={styles.product_name}>{product.name}</p>
                 <p className={styles.product_description}>{product.description}</p>
-                <a
+                <div
                   className={styles.product_button}
-                  href={product.link}
-                  target='_blank'
                 >
                   <Image
                     src={whatsapp}
@@ -106,8 +104,14 @@ function Products () {
                     height={14}
                     alt='icone whatsapp'
                   />
-                  Adquirir
-                </a>
+                  <a
+                    className={styles.product_button_text}
+                    href={product.link}
+                    target='_blank'
+                  >
+                    Adquirir
+                  </a>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
