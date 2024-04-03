@@ -5,14 +5,16 @@ import React from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 import mission from '@/assets/icons/Group (1).svg'
 import products from '@/assets/icons/Vector (1).svg'
 import values from '@/assets/icons/Vector (2).svg'
 
+import directors_data from './directors.json'
+
 import styles from './styles.module.css'
 import 'swiper/css';
-import Image from 'next/image';
 
 const banners_data = [
   {
@@ -105,17 +107,49 @@ function SobreNos () {
       </div>
 
       <div className={styles.values_container}>
-        {values_data.map((item) => (
-          <div
-            key={item.id}
-            className={styles.values_item}
-          >
-            <Image
+        <div className={styles.values_line}/>
+        <div className={`${styles.values_line} ${styles.values_line_big}`}/>
+
+        <div className={styles.values_list}>
+          {values_data.map((item) => (
+            <div
+              key={item.id}
+              className={styles.values_item}
+            >
+              <Image
+                src={item.image}
+                alt='icone dos valores'
+              />
+              <p className={styles.values_title}>{item.title}</p>
+              <p className={styles.values_text}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.directors_container}>
+        {directors_data.data.map((item) => (
+          <div key={item.id} className={styles.directors_item}>
+            <img
               src={item.image}
-              alt='icone dos valores'
+              alt='imagem do diretor'
+              className={styles.directors_image}
             />
-            <p className={styles.values_title}>{item.title}</p>
-            <p className={styles.values_text}>{item.text}</p>
+            <div className={styles.directors_infos}>
+              <p
+                className={styles.directors_title}
+              >
+                {item.name}
+              </p>
+              {item.description.split('\n').map((text) => (
+                <p
+                  key={text}
+                  className={styles.directors_text}
+                >
+                  {text}
+                </p>
+              ))}
+            </div>
           </div>
         ))}
       </div>

@@ -50,8 +50,6 @@ const products_types = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState<Number>(0)
 
-  console.log(activeSlide)
-
   return (
     <div>
       <div className={styles.about_us}>

@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "image": "https://i.postimg.cc/fTbSdbLR/4e933343c53178612816f1b797d292dc.jpg",
+      "name": "CEO Rogério",
+      "description": "Estamos no mercado de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo estado de São Paulo.\n Oferecemos a melhor experiência de atendimento aos nossos clientes, fornecedores e acionistas, desde o primeiro contato."
+    },
+    {
+      "id": 1,
+      "image": "https://i.postimg.cc/QCfBz26D/5310e830d570c2122cafe55c57c12bdd.jpg",
+      "name": "Diretor - Ricardo",
+      "description": "Estamos no mercado de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo estado de São Paulo.\n Oferecemos a melhor experiência de atendimento aos nossos clientes, fornecedores e acionistas, desde o primeiro contato."
+    }
+  ]
+}
