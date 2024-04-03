@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "group_name": "Equipamentos Hospitalares",
+      "products_list": [
+        {
+          "id": 0,
+          "image": "https://i.postimg.cc/prHZVpnP/1f094ada063b91cea2c9e39b195b1d34.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        },
+        {
+          "id": 1,
+          "image": "https://i.postimg.cc/prHZVpnP/1f094ada063b91cea2c9e39b195b1d34.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        },
+        {
+          "id": 2,
+          "image": "https://i.postimg.cc/prHZVpnP/1f094ada063b91cea2c9e39b195b1d34.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "group_name": "Equipamentos Médicos e odontológicos",
+      "products_list": [
+        {
+          "id": 0,
+          "image": "https://i.postimg.cc/ZR3Hhrnf/74e4f118946bfeb604131202eaaf46ef.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        },
+        {
+          "id": 1,
+          "image": "https://i.postimg.cc/ZR3Hhrnf/74e4f118946bfeb604131202eaaf46ef.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        },
+        {
+          "id": 2,
+          "image": "https://i.postimg.cc/ZR3Hhrnf/74e4f118946bfeb604131202eaaf46ef.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        },
+        {
+          "id": 3,
+          "image": "https://i.postimg.cc/ZR3Hhrnf/74e4f118946bfeb604131202eaaf46ef.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "group_name": "Dietas Enterais e Parenterais",
+      "products_list": [
+        {
+          "id": 0,
+          "image": "https://i.postimg.cc/ZR3Hhrnf/74e4f118946bfeb604131202eaaf46ef.png",
+          "name": "Vivavo Tec Pro",
+          "link": "https://google.com",
+          "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva."
+        }
+      ]
+    }
+  ]
+}

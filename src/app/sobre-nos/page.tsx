@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
-import mission from '@/assets/icons/Group (1).svg'
-import products from '@/assets/icons/Vector (1).svg'
-import values from '@/assets/icons/Vector (2).svg'
+import mission from '@/assets/icons/mission.svg'
+import products from '@/assets/icons/products.svg'
+import values from '@/assets/icons/values.svg'
 
 import directors_data from './directors.json'
 
