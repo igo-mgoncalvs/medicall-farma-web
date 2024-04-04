@@ -152,7 +152,7 @@ export default function Home() {
             </Swiper>
           ) : (
             <div
-              className={styles.mobile_service_item}
+              className={styles.mobile_service_item_list}
             >
               {services_data.map(item => (
                 <div key={item.id} className={styles.mobile_service_item}>

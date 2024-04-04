@@ -6,7 +6,6 @@
 
 .suppliers_title_container {
   background-color: #fff;
-  padding: 15px 0;
 }
 
 .suppliers_title {
@@ -18,6 +17,11 @@
   background: -webkit-linear-gradient(90deg, #1C7DDC 0%, #006BD4 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 15px 0;
+}
+
+.suppliers_text {
+  display: none;
 }
 
 .suppliers_group {
@@ -57,11 +61,44 @@
 }
 
 @media (min-width: 768px) {
+  .suppliers_infos_contaienr {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    margin: 30px;
+  }
+
+  .suppliers_image {
+    width: 40vw;
+    border-radius: 18px;
+  }
+
   .suppliers_list {
-    grid:  auto-flow / repeat(5, 1fr) ;
+    grid:  auto-flow / repeat(4, 1fr) ;
+    padding: 30px;
+    margin: 0 40px;
   }
 
   .suppliers_title {
+    justify-content: flex-start;
     font-size: 25px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .suppliers_text {
+    display: block;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .suppliers_logo {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .suppliers_title_section {
+    justify-content: center;
+    padding: 15px 0;
   }
 }

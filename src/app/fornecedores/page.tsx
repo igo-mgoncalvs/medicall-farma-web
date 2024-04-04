@@ -1,49 +1,83 @@
 /* eslint-disable @next/next/no-img-element */
-
 import suppliers_data from './suppliers.json'
+import clients_data from './clients.json'
 
 import styles from './styles.module.css'
-import Image from 'next/image'
 
 function Suppliers () {
   return (
     <div>
-      <img 
-        src='https://i.postimg.cc/XJXRJ0HC/cc2953652c3d7b4f8a2e56515f6d19b3.jpg'
-        alt='banner da pagina de fornecedores'
-        className={styles.suppliers_image}
-      />
+      <div
+        className={styles.suppliers_infos_contaienr}
+      >
+        <img 
+          src='https://i.postimg.cc/XJXRJ0HC/cc2953652c3d7b4f8a2e56515f6d19b3.jpg'
+          alt='banner da pagina de fornecedores'
+          className={styles.suppliers_image}
+        />
 
-      {suppliers_data.data.map((group) => (
-        <div
-          key={group.id}
-          className={styles.suppliers_group}
-        >
-          <div
-            className={styles.suppliers_title_container}
+        <div>
+          <p
+            className={styles.suppliers_title}
           >
-            <p
-              className={styles.suppliers_title}
-            >
-              {group.group_name}
-            </p>
-          </div>
+            Nossos Fornecedores
+          </p>
 
-          <div
-            className={styles.suppliers_list}
-          >
-            {group.list.map((item) => (
-              <div
-                key={item.id}
-                className={styles.suppliers_logo}
-                style={{
-                  backgroundImage: `url(${item.image})`
-                }}
-              />
-            ))}
-          </div>
+          <p className={styles.suppliers_text}>Agradecemos aos nossos fornecedores importantes por sua colaboração contínua e pelo compromisso em fornecer produtos de alta qualidade.<br />Sua dedicação é fundamental para garantir que possamos atender às necessidades de nossos clientes e contribuir para o bem-estar da comunidade.
+          </p>
         </div>
-      ))}
+      </div>
+
+      <div
+        className={styles.suppliers_group}
+      >
+        <div
+          className={styles.suppliers_title_container}
+        >
+        </div>
+
+        <div
+          className={styles.suppliers_list}
+        >
+          {suppliers_data.suppliers.map((item) => (
+            <div
+              key={item.id}
+              className={styles.suppliers_logo}
+              style={{
+                backgroundImage: `url(${item.image})`
+              }}
+            />
+          ))}
+        </div>
+      </div>
+      
+      <div
+        className={styles.suppliers_group}
+      >
+        <div
+          className={styles.suppliers_title_container}
+        >
+          <p
+            className={`${styles.suppliers_title} ${styles.suppliers_title_section}`}
+          >
+            Nossos Clientes
+          </p>
+        </div>
+
+        <div
+          className={styles.suppliers_list}
+        >
+          {clients_data.clients.map((item) => (
+            <div
+              key={item.id}
+              className={styles.suppliers_logo}
+              style={{
+                backgroundImage: `url(${item.image})`
+              }}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

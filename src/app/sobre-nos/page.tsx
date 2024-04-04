@@ -83,9 +83,11 @@ function SobreNos () {
       </div>
 
       <div className={styles.team_container}>
-        <p className={styles.team_title}>Nossa Equipe</p>
-        <div className={styles.team_line}/>
-        <p className={styles.team_text}>Nosso time de colaboradores continua crescendo, agora com mais de 40 pessoas dedicadas.<br /><br />Juntos, trabalhamos incansavelmente para oferecer resultados e serviços de excelência aos nossos clientes na Medicall.</p>
+        <div>
+          <p className={styles.team_title}>Nossa Equipe</p>
+          <div className={styles.team_line}/>
+          <p className={styles.team_text}>Nosso time de colaboradores continua crescendo, agora com mais de 40 pessoas dedicadas.<br /><br />Juntos, trabalhamos incansavelmente para oferecer resultados e serviços de excelência aos nossos clientes na Medicall.</p>
+        </div>
       
         <img
           src={'https://i.postimg.cc/VL80s5x3/e4bdade24efa4155a16aefc2306373bf.jpg'}
@@ -95,10 +97,12 @@ function SobreNos () {
       </div>
 
       <div className={styles.our_space_container}>
-        <p className={styles.our_space_title}>Nosso Espaço</p>
-        <div className={styles.our_space_line}/>
+        <div>
+          <p className={styles.our_space_title}>Nosso Espaço</p>
+          <div className={styles.our_space_line}/>
 
-        <p className={styles.our_space_text}>Estamos em um prédio de 3 andares próprio de nossa empresa. Com um galpão de armazenamento de produtos com uma equipe de logistica preparada. Hoje nosso prédio comporta X pessoas trabalhando para entregar o melhor serviço aos nossos clientes.</p>
+          <p className={styles.our_space_text}>Estamos em um prédio de 3 andares próprio de nossa empresa. Com um galpão de armazenamento de produtos com uma equipe de logistica preparada. Hoje nosso prédio comporta X pessoas trabalhando para entregar o melhor serviço aos nossos clientes.</p>
+        </div>
         <img
           src={'https://i.postimg.cc/rsg629Z9/3ed448618c2d271b1029290323498d8f.jpg'}
           alt='foto da empresa'
@@ -119,6 +123,7 @@ function SobreNos () {
               <Image
                 src={item.image}
                 alt='icone dos valores'
+                className={styles.values_icone}
               />
               <p className={styles.values_title}>{item.title}</p>
               <p className={styles.values_text}>{item.text}</p>
