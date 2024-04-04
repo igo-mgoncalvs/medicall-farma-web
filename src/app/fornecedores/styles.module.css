@@ -102,3 +102,29 @@
     padding: 15px 0;
   }
 }
+
+@media (min-width: 1024px) {
+  .suppliers_infos_contaienr {
+    margin: 40px 50px
+  }
+
+  .suppliers_title {
+    font-size: 30px;
+  }
+
+  .suppliers_text {
+    font-size: 18px;
+  }
+
+  .suppliers_image {
+    width: 50vw;
+    height: 25vw;
+  }
+
+  .suppliers_list {
+    grid:  auto-flow / repeat(5, 1fr);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0;
+  } 
+}

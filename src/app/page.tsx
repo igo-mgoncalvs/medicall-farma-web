@@ -71,7 +71,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <Image
+        <img
           src={'https://i.postimg.cc/W3KPKQxs/0c1283061a209c3d121ad21382548543.jpg'}
           width={310}
           height={205}

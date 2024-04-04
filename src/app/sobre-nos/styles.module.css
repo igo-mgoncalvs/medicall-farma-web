@@ -318,5 +318,68 @@
   .directors_text {
     font-size: 15px;
   }
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    padding: 30px 50px;
+    padding-bottom: 0;
+    min-height: 470px;
+  }
+
+  .history_container {
+    margin: 50px;
+  }
+
+  .history_text {
+    font-size: 16px;
+  }
   
+  .team_container {
+    padding: 50px;
+    gap: 60px;
+  }
+
+  .team_title {
+    font-size: 28px;
+    padding-bottom: 5px;
+  }
+
+  .team_text {
+    font-size: 18px;
+  }
+
+  .our_space_container {
+    padding: 50px;
+  }
+
+  .values_container {
+    padding: 50px;
+  }
+
+  .values_title {
+    font-size: 20px;
+  }
+
+  .values_text {
+    font-size: 14px;
+  }
+
+  .directors_container {
+    padding: 50px;
+    gap: 45px
+  }
+
+  .directors_image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .directors_title {
+    font-size: 30px;
+  }
+
+  .directors_text {
+    font-size: 18px;
+  }
 }

@@ -13,6 +13,11 @@
   display: none;
 }
 
+.logo {
+  width: 165px;
+  height: 40px;
+}
+
 @media (min-width: 768px) {
   .pages_container {
     display: flex;
@@ -47,5 +52,23 @@
     cursor: pointer;
     background-color: #006cd8;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 16px 30px;
+  }
+
+  .pages_container {
+    gap: 45px
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 200px;
+    height: 55px;
+  }
 }

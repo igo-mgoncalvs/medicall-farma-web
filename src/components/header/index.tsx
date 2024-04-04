@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import React from 'react'
@@ -34,11 +35,10 @@ function Header () {
   ]
   return (
     <div className={styles.main}>
-      <Image 
+      <img 
         alt="logo-medicall-farma"
         src={'https://i.postimg.cc/bN2Rw5BB/Logo-Medicall-Horizontal-Cor-1.png'}
-        width={165}
-        height={40}
+        className={styles.logo}
       />
 
       <div

@@ -93,9 +93,10 @@ function Products () {
                 slidesOffsetAfter: 20
               },
               1024: {
-                slidesPerView: 3.2,
-                spaceBetween: 38,
-                slidesOffsetAfter: 80,
+                slidesPerView: 4.5,
+                spaceBetween: 20,
+                slidesOffsetBefore: 40,
+                slidesOffsetAfter: 40
               },
               1440: {
                 slidesPerView: 4.8,
