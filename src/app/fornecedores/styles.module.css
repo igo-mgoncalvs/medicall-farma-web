@@ -1,6 +1,6 @@
 .suppliers_image {
   width: 100vw;
-  height: 30vh;
+  height: auto;
   object-fit: cover;
 }
 
@@ -53,5 +53,15 @@
 @media (min-width: 375px) {
   .suppliers_list {
     grid:  auto-flow / repeat(3, 1fr) ;
+  }
+}
+
+@media (min-width: 768px) {
+  .suppliers_list {
+    grid:  auto-flow / repeat(5, 1fr) ;
+  }
+
+  .suppliers_title {
+    font-size: 25px;
   }
 }

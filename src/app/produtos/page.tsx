@@ -82,6 +82,27 @@ function Products () {
             slidesPerView={2}
             spaceBetween={12}
             className={styles.products_list}
+            breakpoints={{
+              320: {
+                slidesOffsetBefore: 12,
+              },
+              768: {
+                slidesPerView: 3.2,
+                spaceBetween: 20,
+                slidesOffsetBefore: 20,
+                slidesOffsetAfter: 20
+              },
+              1024: {
+                slidesPerView: 3.2,
+                spaceBetween: 38,
+                slidesOffsetAfter: 80,
+              },
+              1440: {
+                slidesPerView: 4.8,
+                spaceBetween: 46,
+                slidesOffsetAfter: 200
+              }
+            }}
           >
             {item?.products_list?.map((product) => (
               <SwiperSlide

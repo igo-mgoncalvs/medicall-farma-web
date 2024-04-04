@@ -23,10 +23,6 @@
   outline: none;
 }
 
-.product_group {
-  margin-left: 15px;
-}
-
 .products_list {
   display: flex;
   margin-bottom: 40px;
@@ -36,6 +32,7 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 18px;
+  margin-left: 15px;
 }
 
 .product_item {
@@ -86,4 +83,31 @@
 
 .product_button:hover {
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .products_search_bar {
+    width: 45%;
+  }
+
+  .product_item {
+    padding: 14px 14px;
+  }
+
+  .products_title {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .product_name {
+    font-size: 15px;
+  }
+
+  .product_description {
+    font-size: 12px;
+  }
+
+  .product_button {
+    font-size: 14px;
+  }
 }
