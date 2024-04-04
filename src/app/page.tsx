@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import React, { useState } from "react";
@@ -7,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from "./page.module.css";
 import 'swiper/css';
 import ContactForm from "@/components/form";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const services_data = [
   {
@@ -50,6 +52,8 @@ const products_types = [
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState<Number>(0)
 
+  const size = useWindowSize()
+
   return (
     <div>
       <div className={styles.about_us}>
@@ -62,7 +66,7 @@ export default function Home() {
         </div>
 
         <Image
-          src={'https://i.postimg.cc/fTjT2NCY/Rectangle-64-2.png'}
+          src={'https://i.postimg.cc/W3KPKQxs/0c1283061a209c3d121ad21382548543.jpg'}
           width={310}
           height={205}
           alt="banner-com-imagem-da-empresa"
@@ -83,85 +87,120 @@ export default function Home() {
           <a className={styles.welcome_button}>Fale Conosco</a>
         </div>
 
-        <Image
-          src={'https://i.postimg.cc/JzYTW5kr/Rectangle-40.png'}
-          width={140}
-          height={140}
+        <img
+          src={'https://i.postimg.cc/wvFkjz9d/image.jpg'}
           alt="banner-com-imagem-da-empresa"
           className={styles.welcome_image}
         />
       </div>
 
       <div className={styles.our_services_container}>
-        <p className={styles.our_services_title}>Nossos serviços</p>
+        <img
+          src="https://i.postimg.cc/W4j708p8/image.jpg"
+          className={styles.our_services_image}
+          alt=""
+        />
 
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={1.15}
-          className={styles.our_services_list}
-        >
-          {services_data.map(item => (
-            <SwiperSlide
-              key={item.id}
+        <div>
+          <p className={styles.our_services_title}>Nossos serviços</p>
+          {size.width < 768 ? (
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={1.15}
+              className={styles.our_services_list}
+            >
+              {services_data.map(item => (
+                <SwiperSlide
+                  key={item.id}
+                  className={styles.mobile_service_item}
+                >
+                  {({ isActive }) => {
+                    if(isActive) {
+                      setActiveSlide(item.id) 
+                    }
+                    return (
+                      <>
+                        <Image 
+                          src={item.image}
+                          width={120}
+                          height={120}
+                          alt="icone-do-serviço"
+                          className={styles.mobile_service_image}
+                        />
+                        <div>
+                          <div className={styles.our_services_item_title}>
+                            <Image 
+                              src={item.icon}
+                              width={21}
+                              height={16}
+                              alt="icone-do-serviço"
+                            />
+                            <p>{item.title}</p>
+                          </div>
+                          <p className={styles.our_services_item_text}>{item.text}</p>
+                        </div>
+                      </>
+                    )}}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div
               className={styles.mobile_service_item}
             >
-              {({ isActive }) => {
-                if(isActive) {
-                  setActiveSlide(item.id) 
-                }
-                return (
-                  <>
-                    <Image 
-                      src={item.image}
-                      width={120}
-                      height={120}
+              {services_data.map(item => (
+                <div key={item.id} className={styles.mobile_service_item}>
+                  <div className={styles.our_services_item_title}>
+                    <img 
+                      src={item.icon}
                       alt="icone-do-serviço"
-                      className={styles.mobile_service_image}
+                      className={styles.our_services_item_icone}
                     />
-                    <div>
-                      <div className={styles.our_services_item_title}>
-                        <Image 
-                          src={item.icon}
-                          width={21}
-                          height={16}
-                          alt="icone-do-serviço"
-                        />
-                        <p>{item.title}</p>
-                      </div>
-                      <p className={styles.our_services_item_text}>{item.text}</p>
-                    </div>
-                  </>
-                )}}
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                    <p>{item.title}</p>
+                  </div>
+                  <p className={styles.our_services_item_text}>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          )}
 
-        <div className={styles.our_services_card_indicator_container}>
-          {services_data.map((item) => (
-            <div
-              key={item.id}
-              className={`${styles.our_services_card_indicator} ${activeSlide === item.id && styles.our_services_card_indicator_active}`}
-            />
-          ))}
+          {size.width < 768 && (
+            <div className={styles.our_services_card_indicator_container}>
+              {services_data.map((item) => (
+                <div
+                  key={item.id}
+                  className={`${styles.our_services_card_indicator} ${activeSlide === item.id && styles.our_services_card_indicator_active}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
       <div className={styles.products_container}>
-        <p className={styles.products_title}>Tipos de Produtos</p>
-        <div className={styles.products_line} />
-        
-        <div className={styles.products_list}>
-          {products_types.map((item) => (
-            <p
-              key={item.id}
-              className={styles.products_list_item}
-            >
-              {item.type}
-            </p>
-          ))}
+        <div>
+          <p className={styles.products_title}>Tipos de Produtos</p>
+          <div className={styles.products_line} />
+          
+          <div className={styles.products_list}>
+            {products_types.map((item) => (
+              <p
+                key={item.id}
+                className={styles.products_list_item}
+              >
+                {item.type}
+              </p>
+            ))}
+          </div>
+
+          <a className={styles.products_button}>Conhecer Produtos</a>
         </div>
 
-        <a className={styles.products_button}>Conhecer Produtos</a>
+        <img
+          src="https://i.postimg.cc/wvFkjz9d/image.jpg"
+          className={styles.our_services_image}
+          alt=""
+        />
       </div>
 
       <div className={styles.catalog_container}>
@@ -176,10 +215,8 @@ export default function Home() {
           <a className={styles.catalog_button}>Baixar</a>
         </div>
 
-        <Image
+        <img
           src={'https://i.postimg.cc/6Qz8Zd84/Catalogo-celular-1.png'}
-          width={120}
-          height={154}
           alt="imagem de referencia do catalogo"
           className={styles.catalog_image}
         />

@@ -39,7 +39,7 @@ function MenuMobile() {
         <Link
           href={item.page}
           key={item.id}
-          className={`${styles.link} ${pathname === `/${item.page}` && styles.active}`}
+          className={`${styles.link} ${pathname === `/${item.page.replace('/', '')}` && styles.active}`}
         >
           {item.title}
         </Link>

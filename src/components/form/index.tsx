@@ -20,7 +20,7 @@ function ContactForm () {
 
   return (
     <div className={styles.form_container}>
-      <p className={styles.form_title}>Preencha o Formulário</p>
+      <p className={styles.form_title}>Entre em contato</p>
 
       <form className={styles.form}>
         <Controller

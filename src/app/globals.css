@@ -94,6 +94,12 @@ body {
   margin-bottom: 49px;
 }
 
+@media (min-width: 768px) {
+  .children {
+    margin-bottom: 0;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;

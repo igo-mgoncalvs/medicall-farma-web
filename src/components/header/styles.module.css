@@ -4,3 +4,48 @@
   justify-content: space-between;
   padding: 16px;
 }
+
+.pages_container {
+  display: none;
+}
+
+.button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pages_container {
+    display: flex;
+    gap: 30px
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding-bottom: 1px;
+  }
+  
+  .active {
+    font-weight: 400;
+    border: 0 solid #0081FF;
+    border-bottom-width: 2px;
+  }
+  
+  .button {
+    display: block;
+    background-color: #0180FF;
+    padding: 8px 21px;
+    color: #fff;
+    font-size: 20x;
+    font-weight: 500;
+    border-radius: 14px;
+    transition: all ease-in-out 0.5s;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    background-color: #006cd8;
+  }
+  
+}
