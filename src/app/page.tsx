@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 import 'swiper/css';
 import ContactForm from "@/components/form";
 import useWindowSize from "@/hooks/useWindowSize";
+import Link from "next/link";
 
 const services_data = [
   {
@@ -62,7 +63,12 @@ export default function Home() {
             <p className={styles.title}>Medicall Farma</p>
             <p className={styles.text}>Há mais de 15 anos no mercado de vendas e distribuição de materiais médicos.</p>
           </div>
-          <a className={styles.button}>Saber Mais</a>
+          <Link
+            className={styles.button}
+            href={'sobre-nos'}
+          >
+            Saber Mais
+          </Link>
         </div>
 
         <Image
@@ -193,7 +199,12 @@ export default function Home() {
             ))}
           </div>
 
-          <a className={styles.products_button}>Conhecer Produtos</a>
+          <Link
+            className={styles.products_button}
+            href={'produtos'}
+          >
+            Conhecer Produtos
+          </Link>
         </div>
 
         <img
