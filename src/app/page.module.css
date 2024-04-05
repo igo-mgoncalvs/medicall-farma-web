@@ -184,6 +184,7 @@
 
 .products_container {
   padding: 14px 22px;
+  background: linear-gradient(180deg, #FFFFFF 50%, #D9D9D9 100%);
 }
 
 .products_title {
@@ -593,6 +594,14 @@
     margin-bottom: 67px;
   }
 
+  .our_services_container {
+    padding: 50px 90px;
+  }
+
+  .our_services_item_text {
+    font-size: 18px;
+  }
+
   .products_title {
     font-size: 30px;
   }
@@ -603,5 +612,138 @@
 
   .products_button {
     font-size: 20px;
+  }
+
+  .catalog_image {
+    border-radius: 132px 132px 0 0;
+  }
+}
+
+@media (min-width: 2560px) {
+  .about_us {
+    gap: 2px
+  }
+
+  .infos_container {
+    margin-left: 8%;
+    gap: 10%
+  }
+
+  .text {
+    width: 30vw;
+  }
+
+  .button {
+    font-size: 30px;
+  }
+
+  .banner {
+    width: 22%;
+    height: 28%;
+  }
+
+  .contact_form_container {
+    top: 15%
+  }
+
+  .welcome_container {
+    margin-left: 8%;
+    margin-right: 8%;
+    gap: 12%
+  }
+
+  .our_services_container {
+    padding: 4% 8%;
+    gap: 100px
+  }
+
+  .our_services_title {
+    font-size: 50px;
+    margin-bottom: 60px;
+    border-image: linear-gradient(to right, transparent 0%, #fff 0%, #6BB4FB 17%, transparent 18%) 1
+  }
+
+  .our_services_item_icone {
+    width: 50px;
+    height: 40px;
+  }
+
+  .our_services_item_title {
+    font-size: 40px;
+  }
+
+  .our_services_item_text {
+    font-size: 30px;
+  }
+
+  .mobile_service_item_list {
+    gap: 50px
+  }
+
+  .mobile_service_item {
+    gap: 20px
+  }
+
+  .products_container {
+    padding: 4% 8%;
+  }
+
+  .products_title {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  .products_line {
+    height: 4.5px;
+    margin-bottom: 50px;
+  }
+
+  .products_list {
+    margin-bottom: 85px;
+  }
+
+  .products_list_item {
+    font-size: 32px;
+    margin-bottom: 45px;
+  }
+
+  .products_list_item::before {
+    height: 4.5px;
+    width: 26px;
+    margin-right: 20px;
+  }
+
+  .products_button {
+    font-size: 35px;
+    border-radius: 18px;
+    padding: 20px 30px;
+    font-weight: 600;
+  }
+
+  .catalog_container{
+    padding: 4% 8%;
+  }
+  
+  .catalog_title {    
+    font-size: 55px;
+    margin-bottom: 18px;
+    padding-top: 30%;
+    font-weight: 600;
+  }
+
+  .catalog_text {
+    font-size: 30px;
+    margin-bottom: 120px;
+  }
+
+  .catalog_button {
+    font-size: 30px;
+    padding: 20px 50px;
+    border-radius: 16px;
+  }
+
+  .catalog_image {
+    width: 20vw;
+    border-radius: 180px 180px 0 0;
   }
 }

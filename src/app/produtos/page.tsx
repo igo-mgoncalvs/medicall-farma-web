@@ -62,6 +62,7 @@ function Products () {
           height={16}
           src={search_logo}
           alt='icone de pesquisa'
+          className={styles.products_search_bar_icone}
         />
         <input 
           placeholder='Pesquise por produtos'
@@ -103,6 +104,12 @@ function Products () {
                 spaceBetween: 20,
                 slidesOffsetBefore: 40,
                 slidesOffsetAfter: 40
+              },
+              2560: {
+                slidesPerView: 5.8,
+                spaceBetween: 30,
+                slidesOffsetBefore: 80,
+                slidesOffsetAfter: 80
               }
             }}
           >
@@ -125,6 +132,7 @@ function Products () {
                     src={whatsapp}
                     sizes='(min-width: 1440px) 20px, 20px'
                     alt='icone whatsapp'
+                    className={styles.product_item_icone}
                   />
                   <a
                     className={styles.product_button_text}

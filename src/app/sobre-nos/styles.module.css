@@ -196,6 +196,7 @@
   .banner {
     min-height: 351px;
     padding: 10px 30px;
+    margin-top: 10px;
   }
 
   .history_container {
@@ -486,5 +487,114 @@
 
   .directors_text {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .banner {
+    padding: 2% 8%;
+  }
+  
+  .history_container {
+    padding: 0 8%;
+    padding-bottom: 1%;
+    margin: 0;
+  }
+
+  .history_title {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  .history_text {
+    font-size: 30px;
+    margin-right: 40%;
+  }
+
+  .team_container {
+    padding: 4% 8%;
+  }
+
+  .team_title {
+    font-size: 60px;
+  }
+  
+  .team_line {
+    height: 5.5px;
+    margin-bottom: 60px;
+  }
+
+  .team_text {
+    font-size: 35px;
+  }
+
+  .our_space_container {
+    padding: 4% 8%;
+    gap: 8%
+  }
+
+  .our_space_title{
+    font-size: 60px;
+  }
+
+  .our_space_line {
+    height: 5px;
+    margin-bottom: 50px;
+  }
+
+  .our_space_text {
+    font-size: 35px;
+  }
+
+  .values_container {
+    padding: 4% 8%;
+  }
+
+  .values_icone {
+    width: 150px;
+    height: 120px;
+  }
+
+  .values_line {
+    height: 5px;
+    margin-bottom: 30px;
+  }
+
+  .values_title {
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .values_text {
+    font-size: 30px;
+  }
+
+  .directors_container {
+    gap: 130px;
+    padding: 8%;
+  }
+  
+  .directors_item {
+    gap: 150px
+  }
+
+  .directors_image {
+    width: 549px;
+    height: 550px;
+    border-radius: 70px;
+  }
+
+  .directors_title {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  .directors_infos {
+    max-width: 30vw;
+  }
+
+  .directors_text {
+    font-size: 40px;
   }
 }

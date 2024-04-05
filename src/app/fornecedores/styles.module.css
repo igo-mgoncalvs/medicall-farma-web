@@ -36,8 +36,7 @@
   display: grid;
   grid:  auto-flow / repeat(2, 1fr) ;
   gap: 15px;
-  padding: 30px 0;
-  margin: 0 20px;
+  padding: 50px 0;
 }
 
 .suppliers_list_background {
@@ -70,6 +69,7 @@
     flex-direction: row-reverse;
     gap: 40px;
     margin: 30px;
+    margin-top: 94px;
   }
 
   .suppliers_image {
@@ -79,8 +79,7 @@
 
   .suppliers_list {
     grid:  auto-flow / repeat(4, 1fr) ;
-    padding: 30px;
-    margin: 0 40px;
+    padding: 70px;
   }
 
   .suppliers_title {
@@ -109,7 +108,8 @@
 
 @media (min-width: 1024px) {
   .suppliers_infos_container {
-    margin: 40px 50px
+    margin: 40px 50px;
+    margin-top: 115px;
   }
 
   .suppliers_title {
@@ -150,5 +150,26 @@
   .suppliers_image {
     width: 45vw;
     height: 25vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  .suppliers_infos_container {
+    margin: 4% 8%;
+    margin-top: 200px;
+    gap: 150px
+  }
+
+  .suppliers_title {
+    font-size: 50px;
+  }
+
+  .suppliers_text {
+    font-size: 35px;
+  }
+
+  .suppliers_list {
+    row-gap: 50px;
+    padding: 4% 8%;
   }
 }

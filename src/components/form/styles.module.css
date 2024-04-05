@@ -132,3 +132,32 @@
     font-size: 18px;
   }
 }
+
+@media (min-width: 2560px) {
+  .form_container {
+    width: 65%;
+    padding: 20px 10px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .form_title {
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .input {
+    font-size: 25px;
+    padding: 15px;
+  }
+
+  .textarea {
+    height: 15vh;
+  }
+
+  .submit_buttom {
+    font-size: 25px;
+  }
+}
