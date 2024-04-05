@@ -90,7 +90,13 @@ export default function Home() {
             Somos uma empresa de distribuição de materiais hospitalares há mais de 15 anos. Obtivemos um crescimento de 70% desde 2023.
           </p>
           <div className={styles.welcome_line_before} />
-          <a className={styles.welcome_button}>Fale Conosco</a>
+          <a
+            className={styles.welcome_button}
+            target="_blank"
+            href="https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1"
+          >
+            Fale Conosco
+          </a>
         </div>
 
         <img

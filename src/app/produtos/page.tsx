@@ -80,33 +80,43 @@ function Products () {
           </p>
 
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1.7}
             spaceBetween={12}
             className={styles.products_list}
             breakpoints={{
               320: {
                 slidesOffsetBefore: 12,
+                slidesPerView: 1.5,
+              },
+              375: {
+                slidesOffsetBefore: 12,
+                slidesPerView: 1.7,
+              },
+              425: {
+                slidesOffsetBefore: 12,
+                slidesPerView: 2,
+                spaceBetween: 22,
               },
               768: {
-                slidesPerView: 3.2,
+                slidesPerView: 3,
                 spaceBetween: 20,
                 slidesOffsetBefore: 20,
                 slidesOffsetAfter: 20
               },
               1024: {
-                slidesPerView: 4.5,
+                slidesPerView: 4,
                 spaceBetween: 20,
                 slidesOffsetBefore: 40,
                 slidesOffsetAfter: 40
               },
               1440: {
-                slidesPerView: 5.8,
+                slidesPerView: 4.8,
                 spaceBetween: 20,
                 slidesOffsetBefore: 40,
                 slidesOffsetAfter: 40
               },
               2560: {
-                slidesPerView: 5.8,
+                slidesPerView: 4.6,
                 spaceBetween: 30,
                 slidesOffsetBefore: 80,
                 slidesOffsetAfter: 80
@@ -126,21 +136,36 @@ function Products () {
                 <p className={styles.product_name}>{product.name}</p>
                 <p className={styles.product_description}>{product.description}</p>
                 <div
-                  className={styles.product_button}
+                  className={styles.product_buttons_container}
                 >
-                  <Image
-                    src={whatsapp}
-                    sizes='(min-width: 1440px) 20px, 20px'
-                    alt='icone whatsapp'
-                    className={styles.product_item_icone}
-                  />
-                  <a
-                    className={styles.product_button_text}
-                    href={product.link}
-                    target='_blank'
+                  <div
+                    className={styles.product_button}
                   >
-                    Adquirir
-                  </a>
+                    <Image
+                      src={whatsapp}
+                      sizes='(min-width: 1440px) 20px, 20px'
+                      alt='icone whatsapp'
+                      className={styles.product_item_icone}
+                    />
+                      <a
+                        className={styles.product_button_text}
+                        href={product.link}
+                        target='_blank'
+                      >
+                        Adquirir
+                      </a>
+                  </div>
+                  <div
+                    className={`${styles.product_button} ${styles.product_button_blue}`}
+                  >
+                      <a
+                        className={styles.product_button_text}
+                        href={product.link}
+                        target='_blank'
+                      >
+                        Sabiba mais
+                      </a>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

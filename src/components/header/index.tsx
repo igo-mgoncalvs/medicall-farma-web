@@ -55,7 +55,11 @@ function Header () {
         ))}
       </div>
 
-        <a className={styles.button}>
+        <a
+          className={styles.button}
+          href='https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1'
+          target='_blank'
+        >
           Contato
         </a>
     </div>
