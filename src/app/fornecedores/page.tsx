@@ -8,7 +8,7 @@ function Suppliers () {
   return (
     <div>
       <div
-        className={styles.suppliers_infos_contaienr}
+        className={styles.suppliers_infos_container}
       >
         <img 
           src='https://i.postimg.cc/XJXRJ0HC/cc2953652c3d7b4f8a2e56515f6d19b3.jpg'
@@ -65,7 +65,7 @@ function Suppliers () {
         </div>
 
         <div
-          className={styles.suppliers_list}
+          className={`${styles.suppliers_list} ${styles.suppliers_list_background}`}
         >
           {clients_data.clients.map((item) => (
             <div

@@ -99,9 +99,10 @@ function Products () {
                 slidesOffsetAfter: 40
               },
               1440: {
-                slidesPerView: 4.8,
-                spaceBetween: 46,
-                slidesOffsetAfter: 200
+                slidesPerView: 5.8,
+                spaceBetween: 20,
+                slidesOffsetBefore: 40,
+                slidesOffsetAfter: 40
               }
             }}
           >
@@ -122,8 +123,7 @@ function Products () {
                 >
                   <Image
                     src={whatsapp}
-                    width={14}
-                    height={14}
+                    sizes='(min-width: 1440px) 20px, 20px'
                     alt='icone whatsapp'
                   />
                   <a

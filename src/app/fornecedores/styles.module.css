@@ -4,7 +4,7 @@
   object-fit: cover;
 }
 
-.suppliers_title_container {
+.suppliers_infos_container {
   background-color: #fff;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .suppliers_group:nth-child(2n + 1) {
-  background:#D9D9D9;
+  background: #fff;
 }
 
 .suppliers_list {
@@ -38,6 +38,10 @@
   gap: 15px;
   padding: 30px 0;
   margin: 0 20px;
+}
+
+.suppliers_list_background {
+  background: #D9D9D9;
 }
 
 .suppliers_logo {
@@ -61,7 +65,7 @@
 }
 
 @media (min-width: 768px) {
-  .suppliers_infos_contaienr {
+  .suppliers_infos_container {
     display: flex;
     flex-direction: row-reverse;
     gap: 40px;
@@ -104,7 +108,7 @@
 }
 
 @media (min-width: 1024px) {
-  .suppliers_infos_contaienr {
+  .suppliers_infos_container {
     margin: 40px 50px
   }
 
@@ -127,4 +131,24 @@
     padding-bottom: 60px;
     margin: 0;
   } 
+}
+
+@media (min-width: 1440px) {
+  .suppliers_infos_container {
+    gap: 115px
+  }
+
+  .suppliers_title {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .suppliers_text {
+    font-size: 22px;
+  }
+
+  .suppliers_image {
+    width: 45vw;
+    height: 25vw;
+  }
 }

@@ -168,7 +168,7 @@
 }
 
 .directors_image {
-  width: 116px;
+  width: 115px;
   height: 120px;
   object-fit: cover;
   border-radius: 18px;
@@ -303,7 +303,7 @@
   }
 
   .directors_image {
-    width: 200px;
+    width: 199px;
     height: 200px;
   }
 
@@ -371,7 +371,7 @@
   }
 
   .directors_image {
-    width: 250px;
+    width: 249px;
     height: 250px;
   }
 
@@ -381,5 +381,110 @@
 
   .directors_text {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner {
+    padding-left: 90px;
+    padding-right: 90px;
+    min-height: 570px;
+  }
+
+  .history_container {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+  .history_title {
+    font-size: 40px;
+  }
+
+  .history_text {
+    margin-right: 35vw;
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
+
+  .team_container {
+    padding-left: 90px;
+    padding-right: 90px;
+    gap: 175px
+  }
+
+  .team_title {
+    font-size: 40px;
+  }
+
+  .team_line {
+    height: 2.5px;
+    width: 20%;
+  }
+
+  .team_text {
+    font-size: 20px;
+  }
+
+  .team_image {
+    width: 40vw;
+  }
+
+  .our_space_container {
+   padding: 70px 90px; 
+  }
+
+  .our_space_title {
+    font-size: 40px;
+  }
+
+  .our_space_line {
+    height: 2.5px;
+  }
+
+  .our_space_text {
+    font-size: 20px;
+  }
+
+  .values_container {
+    padding: 70px 90px;
+  }
+
+  .values_line {
+    margin-bottom: 20px;
+  }
+
+  .values_icone {
+    width: 70px;
+    height: 60px;
+  }
+
+  .values_title {
+    font-size: 25px;
+  }
+
+  .values_text {
+    font-size: 15px;
+  }
+
+  .directors_container {
+    padding: 90px;
+    gap: 80px
+  }
+  
+  .directors_item {
+    gap: 80px
+  }
+
+  .directors_image {
+    width: 349px;
+    height: 350px;
+  }
+
+  .directors_title {
+    font-size: 40px;
+  }
+
+  .directors_text {
+    font-size: 20px;
   }
 }

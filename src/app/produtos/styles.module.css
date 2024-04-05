@@ -119,3 +119,27 @@
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: 1440px) {
+  .product_image {
+    width: 85px;
+    height: 90px;
+  }
+
+  .product_name {
+    font-size: 18px;
+  }
+
+  .product_button_icone {
+    width: 14px;
+    height: 14px;
+  }
+
+  .product_button_text {
+    font-size: 18px;
+  }
+
+  .product_description {
+    font-size: 14px;
+  }
+}

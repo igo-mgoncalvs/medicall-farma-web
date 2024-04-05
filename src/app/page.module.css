@@ -88,7 +88,7 @@
 }
 
 .welcome_button {
-  background-image: linear-gradient(#009255, #15B370);
+  background-image: linear-gradient(to top, #009255, #15B370);
   padding: 6px 8px;
   color: white;
   border-radius: 6px;
@@ -488,6 +488,10 @@
     gap: 26px
   }
 
+  .welcome_button {
+    border-radius: 16px;
+  }
+
   .our_services_container {
     justify-content: space-between;
     padding: 30px 50px;
@@ -523,5 +527,81 @@
   .catalog_image {
     width: 25vw;
     border-radius: 93px 93px 0 0 ;
+  }
+}
+
+@media (min-width: 1440px) {
+  .infos_container {
+    margin-left: 67px;
+    justify-content: flex-start;
+  }
+
+  .text_container {
+    margin-top: 80px;
+  }
+
+  .banner {
+    width: 420px;
+    height: 700px;
+    border-top-left-radius: 222px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .button {
+    font-size: 25px;
+    padding: 15px 30px;
+  }
+
+  .contact_form_container {
+    top: 20%;
+    right: 20%;
+  }
+
+  .welcome_container {
+    gap: 78px;
+    margin: 70px;
+  }
+  
+  .welcome_title {
+    font-size: 64px;
+    padding-bottom: 22px;
+  }
+  
+  .welcome_text {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 22px 0;
+  }
+
+  .welcome_button {
+    font-size: 30px;
+    padding: 16px 20px;
+  }
+
+  .welcome_image {
+    width: 40vw;
+  }
+
+  .welcome_line_before {
+    margin-bottom: 67px;
+  }
+
+  .products_title {
+    font-size: 30px;
+  }
+
+  .products_list_item {
+    font-size: 20px;
+  }
+
+  .products_button {
+    font-size: 20px;
   }
 }
