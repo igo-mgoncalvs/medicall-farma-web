@@ -160,8 +160,7 @@ function Products () {
                   >
                       <a
                         className={styles.product_button_text}
-                        href={product.link}
-                        target='_blank'
+                        href={`produtos/${product.id}`}
                       >
                         Sabiba mais
                       </a>

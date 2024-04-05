@@ -19,17 +19,17 @@ function Header () {
     },
     {
       id: 1,
-      page: 'sobre-nos',
+      page: '/sobre-nos',
       title: 'Sobre nós'
     },
     {
       id: 2,
-      page: 'produtos',
+      page: '/produtos',
       title: 'Produtos'
     },
     {
       id: 4,
-      page: 'fornecedores',
+      page: '/fornecedores',
       title: 'Fornecedores'
     },
   ]
