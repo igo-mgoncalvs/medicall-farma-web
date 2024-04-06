@@ -14,7 +14,7 @@ import styles from './styles.module.css'
 import 'swiper/css';
 
 interface IProduct {
-  id: number
+  id: string
   image: string 
   name: string
   link: string
