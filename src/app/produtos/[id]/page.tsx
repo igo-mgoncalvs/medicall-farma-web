@@ -2,10 +2,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 import products_data from '@/app/produtos/products.json'
 
+import goBack from '@/assets/icons/goBack.svg'
+
 import styles from './styles.module.css'
+import { useRouter } from 'next/navigation'
 
 interface IProduct {
   id: string,
@@ -18,9 +22,9 @@ interface IProduct {
 function ProductsDetails ({ params }: { params: { id: string } }) {
   const [productDetail, setProductDetail] = useState<IProduct |  undefined>()
 
-  useEffect(() => {
-    const test = []
+  const navigation = useRouter()
 
+  useEffect(() => {
     products_data.data.forEach((item) => {
       const findItem = item.products_list.find(productItem => productItem.id === params.id)
 
@@ -33,6 +37,19 @@ function ProductsDetails ({ params }: { params: { id: string } }) {
 
   return (
     <div className={styles.products_details}>
+      <div
+        className={styles.product_goBack_container}
+        onClick={() => navigation.back()}
+      >
+        <Image
+          src={goBack}
+          className={styles.product_goBack_icon}
+          alt='icone de voltar'
+        />
+
+        <p>Voltar</p>
+      </div>
+
       {productDetail && (
 
         <div className={styles.products_details_container}>

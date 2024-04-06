@@ -83,8 +83,9 @@
 }
 
 .welcome_text {
-  font-size: 9.45px;
+  font-size: 12px;
   font-weight: 400;
+  margin-right: 47px;
 }
 
 .welcome_button {
@@ -97,6 +98,7 @@
 }
 
 .welcome_image {
+  display: none;
   border-radius: 15px;
   width: 140px;
   height: 140px;
@@ -327,9 +329,11 @@
   
   .welcome_text {
     font-size: 15px;
+    margin-right: 0;
   }
 
   .welcome_image {
+    display: block;
     width: 46vw;
     height: 100%;
     border-radius: 0;
@@ -572,19 +576,19 @@
   }
   
   .welcome_title {
-    font-size: 64px;
+    font-size: 40px;
     padding-bottom: 22px;
   }
   
   .welcome_text {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     padding: 22px 0;
   }
 
   .welcome_button {
-    font-size: 30px;
-    padding: 16px 20px;
+    font-size: 20px;
+    padding: 13px 25px;
   }
 
   .welcome_image {

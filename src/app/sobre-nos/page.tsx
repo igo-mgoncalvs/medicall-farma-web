@@ -34,6 +34,24 @@ const banners_data = [
   }
 ]
 
+const space_data = [
+  {
+    id: 0,
+    image: 'https://i.postimg.cc/pTnLpKby/6cc3b1a18004f66e9ac8ac56622d9899.jpg',
+    description: ''
+  },
+  {
+    id: 1,
+    image: 'https://i.postimg.cc/L6MwY996/6cbac0ad428641d9e5317b3574a988c1.jpg',
+    description: ''
+  },
+  {
+    id: 2,
+    image: 'https://i.postimg.cc/t44rW7Ly/c5d7498a2fc451d29e8120e8f753b605.jpg',
+    description: ''
+  }
+]
+
 const values_data = [
   {
     id: 0,
@@ -97,17 +115,38 @@ function SobreNos () {
       </div>
 
       <div className={styles.our_space_container}>
-        <div>
+        <div className={styles.our_space_text_container}>
           <p className={styles.our_space_title}>Nosso Espaço</p>
           <div className={styles.our_space_line}/>
 
           <p className={styles.our_space_text}>Estamos em um prédio de 3 andares próprio de nossa empresa. Com um galpão de armazenamento de produtos com uma equipe de logistica preparada. Hoje nosso prédio comporta X pessoas trabalhando para entregar o melhor serviço aos nossos clientes.</p>
         </div>
-        <img
-          src={'https://i.postimg.cc/rsg629Z9/3ed448618c2d271b1029290323498d8f.jpg'}
-          alt='foto da empresa'
-          className={styles.our_space_image}
-        />
+        <Swiper
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          breakpoints={{
+            425: {
+              spaceBetween: 22,
+            },
+          }}
+          className={styles.our_space_images_container}
+        >
+          {space_data.map((item) => (
+            <SwiperSlide
+              key={item.id}
+            >
+              <div
+                style={{
+                  backgroundImage: `url(${item.image})`
+                }}
+                className={styles.our_space_image}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className={styles.values_container}>

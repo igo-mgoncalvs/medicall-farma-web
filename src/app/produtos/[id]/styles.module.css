@@ -1,3 +1,20 @@
+.product_goBack_container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  top: 14%;
+  left: 5%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.product_goBack_icon {
+  width: 15px;
+  height: 15px;
+}
+
 .products_details{
   display: flex;
   justify-content: center;
@@ -139,7 +156,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 2560px) {
   .products_details_container {
     padding: 160px;
   }
