@@ -1,0 +1,87 @@
+{
+  "data": {
+    "main": {
+      "title": "Medicall Farma",
+      "text": "Há mais de 15 anos no mercado de vendas e distribuição de materiais médicos.",
+      "button_text": "Saber Mais",
+      "button_link": "sobre-nos",
+      "image": "https://i.postimg.cc/W3KPKQxs/0c1283061a209c3d121ad21382548543.jpg"
+    },
+    "welcome": {
+      "title": "Bem vindo a ",
+      "title_color": "Medicall Farma",
+      "text": "Somos uma empresa de distribuição de materiais hospitalares há mais de 15 anos. Obtivemos um crescimento de 70% desde 2023.",
+      "button_text": "Fale Conosco",
+      "button_link": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1",
+      "image": "https://i.postimg.cc/wvFkjz9d/image.jpg"
+    },
+    "our_service": {
+      "image": "https://i.postimg.cc/W4j708p8/image.jpg",
+      "title": "Nossos serviços",
+      "list": [
+        {
+          "id": 0,
+          "title": "Entrega",
+          "text": "Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.",
+          "icon": "https://i.postimg.cc/yx46jcfT/Vector.png",
+          "image": "https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png"
+        },
+        {
+          "id": 1,
+          "title": "Entrega",
+          "text": "Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.",
+          "icon": "https://i.postimg.cc/yx46jcfT/Vector.png",
+          "image": "https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png"
+        },
+        {
+          "id": 2,
+          "title": "Entrega",
+          "text": "Temos uma equipe que é responsável pela entrega dos materiais dos nossos clientes, fazemos a entrega até a clínica/hospital com segurança e com responsabilidade.",
+          "icon": "https://i.postimg.cc/yx46jcfT/Vector.png",
+          "image": "https://i.postimg.cc/506WZ3KV/b0da6d09b44540a6db7b808aec3f1581.png"
+        }
+      ]
+    },
+    "products": {
+      "title": "Tipos de Produtos",
+      "button_text": "Conhecer Produtos",
+      "button_link": "/produtos",
+      "list": [
+        {
+          "id": 0,
+          "type": "Medicamentos Hospitalares;"
+        },
+        {
+          "id": 1,
+          "type": "Equipamentos Médicos e Odontológicos;"
+        },
+        {
+          "id": 2,
+          "type": "Dietas Enterais e Parenterais;"
+        }
+      ]
+    },
+    "catalog": {
+      "title": "Baixe nosso catálogo",
+      "text": "Confira nossa linha completa de produtos",
+      "button_text": "Baixar",
+      "button_link": "https://google.com",
+      "image": "https://i.postimg.cc/6Qz8Zd84/Catalogo-celular-1.png"
+    },
+    "form": {
+      "title": "",
+      "button_text": "",
+      "email_base": "",
+      "email": "",
+      "phone": "",
+      "infos": "",
+      "product": "",
+      "description": "",
+      "email_placeholder": "",
+      "phone_placeholder": "",
+      "infos_placeholder": "",
+      "product_placeholder": "",
+      "description_placeholder": ""
+    }
+  }
+}
