@@ -1,0 +1,34 @@
+.our_space_images_container {
+  border-radius: 10px;
+}
+
+.our_space_image {
+  width: 100vw;
+  height: 50vw;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .our_space_images_container {
+    border-radius: 18px;
+  }
+
+  .our_space_image {
+    width: 44vw;
+    height: 29vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .our_space_image {
+    width: 36vw;
+    height: 24vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  .our_space_image {
+    width: 40vw;
+    height: 26vw;
+  }
+}

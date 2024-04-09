@@ -3,15 +3,39 @@ import suppliers_data from './suppliers.json'
 import clients_data from './clients.json'
 
 import styles from './styles.module.css'
+import BASE_URL from '@/hooks/axios'
 
-function Suppliers () {
+interface IClientsAndSuppliers {
+  id: string
+  image: string
+  name: string
+}
+
+interface ISuppliersInterface {
+  title: string 
+  text: string 
+  secound_title: string 
+  image: string 
+}
+
+async function getData() {
+  return await Promise.all([
+    (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
+    (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
+    (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data
+  ])
+}
+
+async function Suppliers () {
+  const [suppliers, clients, interfaceData] = await getData()
+
   return (
     <div>
       <div
         className={styles.suppliers_infos_container}
       >
         <img 
-          src='https://i.postimg.cc/XJXRJ0HC/cc2953652c3d7b4f8a2e56515f6d19b3.jpg'
+          src={interfaceData.image}
           alt='banner da pagina de fornecedores'
           className={styles.suppliers_image}
         />
@@ -20,10 +44,11 @@ function Suppliers () {
           <p
             className={styles.suppliers_title}
           >
-            Nossos Fornecedores
+            {interfaceData.title}
           </p>
 
-          <p className={styles.suppliers_text}>Agradecemos aos nossos fornecedores importantes por sua colaboração contínua e pelo compromisso em fornecer produtos de alta qualidade.<br />Sua dedicação é fundamental para garantir que possamos atender às necessidades de nossos clientes e contribuir para o bem-estar da comunidade.
+          <p className={styles.suppliers_text}>
+            {interfaceData.text}
           </p>
         </div>
       </div>
@@ -39,7 +64,7 @@ function Suppliers () {
         <div
           className={styles.suppliers_list}
         >
-          {suppliers_data.suppliers.map((item) => (
+          {suppliers.map((item) => (
             <div
               key={item.id}
               className={styles.suppliers_logo}
@@ -60,14 +85,14 @@ function Suppliers () {
           <p
             className={`${styles.suppliers_title} ${styles.suppliers_title_section}`}
           >
-            Nossos Clientes
+            {interfaceData.secound_title}
           </p>
         </div>
 
         <div
           className={`${styles.suppliers_list} ${styles.suppliers_list_background}`}
         >
-          {clients_data.clients.map((item) => (
+          {clients.map((item) => (
             <div
               key={item.id}
               className={styles.suppliers_logo}

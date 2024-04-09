@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import styles from './styles.module.css'
 import Link from 'next/link';
 
-function Header () {
+function Header ({ contact } : { contact: string }) {
   const pathname = usePathname()
 
   const routes = [
@@ -57,7 +57,7 @@ function Header () {
 
         <a
           className={styles.button}
-          href='https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1'
+          href={contact}
           target='_blank'
         >
           Contato

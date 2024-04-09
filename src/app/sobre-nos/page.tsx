@@ -1,20 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-'use client'
-
 import React from 'react'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 import mission from '@/assets/icons/mission.svg'
 import products from '@/assets/icons/products.svg'
 import values from '@/assets/icons/values.svg'
-
-import directors_data from './directors.json'
+import MainBanners from '@/components/aboutUs/banners/mainBanners';
+import SpaceBanners from '@/components/aboutUs/spaceBanners/spaceBanners';
+import BASE_URL from '@/hooks/axios';
 
 import styles from './styles.module.css'
-import 'swiper/css';
 
 const banners_data = [
   {
@@ -73,42 +69,83 @@ const values_data = [
   }
 ]
 
-function SobreNos () {
+interface IAboutUs {
+  banners: {
+      id: string
+      image: string
+      description: string
+      aboutUsId: string
+    }[], 
+  directors: {
+    id: string
+    title: string
+    text: string
+    Image: string
+    aboutUsId: string
+  }[]
+  history: {
+    id: string
+    title: string
+    text: string
+  },
+  space: {
+    id: string
+    title: string
+    text: string
+    images: {
+      id: string
+      image: string
+    }[]
+  },
+  team: {
+    id: string
+    title: string
+    text: string
+    image: string
+  },
+  values: {
+    id: string
+    image: string
+    title: string
+    text: string
+    aboutUsId: string
+  }[]
+}
+
+async function getData() {
+  return await BASE_URL.get<IAboutUs>('about-us-interface')
+}
+
+async function SobreNos () {
+  const interfaceData = (await getData()).data
+
   return (
     <div>
-      <Swiper
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        spaceBetween={30}
-        modules={[Autoplay]}
-      >
-        {banners_data.map((item) => (
-          <SwiperSlide key={item.id}>
-            <img
-              src={item.image}
-              alt={`banner ${item.description}`}
-              className={styles.banner}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      
+      <MainBanners data={interfaceData.banners} />
 
       <div className={styles.history_container}>
-        <p className={styles.history_title}>Mais de 15 anos de história</p>
-        <p className={styles.history_text}>Há mais de 15 anos, estamos envolvidos no cenário de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo o estado de São Paulo.<br /> Asseguramos a melhor experiência desde o primeiro contato, oferecendo uma variedade de produtos de marcas renomadas, tanto nacionais quanto internacionais. <br />Garantimos agilidade e pontualidade nas entregas por meio de um processo operacional de qualidade rigoroso.<br />Em 2023, a Medicall teve um crescimento de mais de 70%, e está em constante crescimento.</p>
+        <p className={styles.history_title}>
+          {interfaceData.history.title}
+        </p>
+        <p className={styles.history_text}>
+          {interfaceData.history.text}
+        </p>
       </div>
 
       <div className={styles.team_container}>
         <div>
-          <p className={styles.team_title}>Nossa Equipe</p>
+          <p className={styles.team_title}>
+            {interfaceData.team.title}
+          </p>
           <div className={styles.team_line}/>
-          <p className={styles.team_text}>Nosso time de colaboradores continua crescendo, agora com mais de 40 pessoas dedicadas.<br /><br />Juntos, trabalhamos incansavelmente para oferecer resultados e serviços de excelência aos nossos clientes na Medicall.</p>
+          <p className={styles.team_text}>
+            {interfaceData.team.text}
+          </p>
         </div>
       
         <img
-          src={'https://i.postimg.cc/VL80s5x3/e4bdade24efa4155a16aefc2306373bf.jpg'}
+          src={interfaceData.team.image}
           alt='foto da equipe'
           className={styles.team_image}
         />
@@ -116,37 +153,17 @@ function SobreNos () {
 
       <div className={styles.our_space_container}>
         <div className={styles.our_space_text_container}>
-          <p className={styles.our_space_title}>Nosso Espaço</p>
+          <p className={styles.our_space_title}>
+            {interfaceData.space.title}
+          </p>
           <div className={styles.our_space_line}/>
 
-          <p className={styles.our_space_text}>Estamos em um prédio de 3 andares próprio de nossa empresa. Com um galpão de armazenamento de produtos com uma equipe de logistica preparada. Hoje nosso prédio comporta X pessoas trabalhando para entregar o melhor serviço aos nossos clientes.</p>
+          <p className={styles.our_space_text}>
+            {interfaceData.space.text}
+          </p>
         </div>
-        <Swiper
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
-          breakpoints={{
-            425: {
-              spaceBetween: 22,
-            },
-          }}
-          className={styles.our_space_images_container}
-        >
-          {space_data.map((item) => (
-            <SwiperSlide
-              key={item.id}
-            >
-              <div
-                style={{
-                  backgroundImage: `url(${item.image})`
-                }}
-                className={styles.our_space_image}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        
+        <SpaceBanners data={interfaceData.space.images} />
       </div>
 
       <div className={styles.values_container}>
@@ -154,7 +171,7 @@ function SobreNos () {
         <div className={`${styles.values_line} ${styles.values_line_big}`}/>
 
         <div className={styles.values_list}>
-          {values_data.map((item) => (
+          {interfaceData.values.map((item) => (
             <div
               key={item.id}
               className={styles.values_item}
@@ -172,10 +189,10 @@ function SobreNos () {
       </div>
 
       <div className={styles.directors_container}>
-        {directors_data.data.map((item) => (
+        {interfaceData.directors.map((item) => (
           <div key={item.id} className={styles.directors_item}>
             <img
-              src={item.image}
+              src={item.Image}
               alt='imagem do diretor'
               className={styles.directors_image}
             />
@@ -183,9 +200,9 @@ function SobreNos () {
               <p
                 className={styles.directors_title}
               >
-                {item.name}
+                {item.title}
               </p>
-              {item.description.split('\n').map((text) => (
+              {item.text.split('\n').map((text) => (
                 <p
                   key={text}
                   className={styles.directors_text}

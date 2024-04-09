@@ -1,12 +1,3 @@
-.banner {
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  min-height: 171px;
-  padding: 10px 12px;
-  border-radius: 30px
-}
-
 .history_container {
   margin: 12px 12px;
   margin-bottom: 17px;
@@ -90,16 +81,6 @@
 .our_space_text {
   font-size: 12px;
   margin-bottom: 25px;
-}
-
-.our_space_images_container {
-  border-radius: 10px;
-}
-
-.our_space_image {
-  width: 100vw;
-  height: 50vw;
-  background-size: cover;
 }
 
 .values_container {
@@ -196,12 +177,6 @@
 
 
 @media (min-width: 768px) {
-  .banner {
-    min-height: 351px;
-    padding: 10px 30px;
-    margin-top: 10px;
-  }
-
   .history_container {
     margin-right: 30vw;
     margin-left: 30px;
@@ -261,15 +236,6 @@
 
   .our_space_text {
     font-size: 15px;
-  }
-
-  .our_space_images_container {
-    border-radius: 18px;
-  }
-
-  .our_space_image {
-    width: 44vw;
-    height: 29vw;
   }
 
   .values_container {
@@ -332,12 +298,6 @@
 }
 
 @media (min-width: 1024px) {
-  .banner {
-    padding: 30px 50px;
-    padding-bottom: 0;
-    min-height: 470px;
-  }
-
   .history_container {
     margin: 50px;
   }
@@ -363,11 +323,6 @@
   .our_space_container {
     padding: 50px;
     gap: 80px
-  }
-
-  .our_space_image {
-    width: 36vw;
-    height: 24vw;
   }
 
   .values_container {
@@ -402,12 +357,6 @@
 }
 
 @media (min-width: 1440px) {
-  .banner {
-    padding-left: 90px;
-    padding-right: 90px;
-    min-height: 570px;
-  }
-
   .history_container {
     margin-left: 90px;
     margin-right: 90px;
@@ -506,11 +455,7 @@
   }
 }
 
-@media (min-width: 2560px) {
-  .banner {
-    padding: 2% 8%;
-  }
-  
+@media (min-width: 2560px) {  
   .history_container {
     padding: 0 8%;
     padding-bottom: 1%;
@@ -547,11 +492,6 @@
   .our_space_container {
     padding: 4% 8%;
     gap: 8%
-  }
-
-  .our_space_image {
-    width: 40vw;
-    height: 26vw;
   }
 
   .our_space_text_container {
