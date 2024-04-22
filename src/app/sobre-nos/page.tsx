@@ -10,6 +10,8 @@ import MainBanners from '@/components/aboutUs/banners/mainBanners';
 import SpaceBanners from '@/components/aboutUs/spaceBanners/spaceBanners';
 import BASE_URL from '@/hooks/axios';
 
+import interface_data from './interface.json'
+
 import styles from './styles.module.css'
 
 const banners_data = [
@@ -113,11 +115,11 @@ interface IAboutUs {
 }
 
 async function getData() {
-  return await BASE_URL.get<IAboutUs>('about-us-interface')
+  return interface_data.data
 }
 
 async function SobreNos () {
-  const interfaceData = (await getData()).data
+  const interfaceData = await getData()
 
   return (
     <div>
@@ -176,8 +178,10 @@ async function SobreNos () {
               key={item.id}
               className={styles.values_item}
             >
-              <Image
+              <img
                 src={item.image}
+                width={34}
+                height={34}
                 alt='icone dos valores'
                 className={styles.values_icone}
               />
@@ -192,7 +196,7 @@ async function SobreNos () {
         {interfaceData.directors.map((item) => (
           <div key={item.id} className={styles.directors_item}>
             <img
-              src={item.Image}
+              src={item.image}
               alt='imagem do diretor'
               className={styles.directors_image}
             />

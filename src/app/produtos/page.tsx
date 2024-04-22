@@ -2,9 +2,10 @@ import React from 'react'
 
 import PageProductsClient from '@/components/pageProductsClient/page';
 import BASE_URL from '@/hooks/axios';
+import products_data from './products.json'
 
 interface IProduct {
-  id: string
+  id: number
   image: string 
   name: string
   link: string
@@ -18,8 +19,7 @@ interface IGroups {
 }
 
 async function getData() {
-  return await BASE_URL.get<IGroups[]>('/products')
-  .then((response) => response.data)
+  return products_data.data
 }
 
 async function Products () {

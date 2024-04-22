@@ -20,7 +20,9 @@ interface IContact {
 }
 
 async function getData() {
-  return (await BASE_URL.get<IContact>('/contact-link')).data
+  return {
+    link: 'https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1'
+  }
 }
 
 export default async function RootLayout({

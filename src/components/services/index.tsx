@@ -9,7 +9,7 @@ import styles from './styles.module.css'
 import Image from "next/image";
 
 interface IServicesList {
-  id: string,
+  id: number,
   title: string
   text: string
   icon: string

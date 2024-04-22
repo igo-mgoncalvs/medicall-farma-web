@@ -1,0 +1,322 @@
+{
+  "data": [
+    {
+        "id": "8682c29b-bf82-45db-b0b3-64cf3871807a",
+        "group_name": "Equipamentos Hospitalares",
+        "products_list": [
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro",
+                "name": "Vivano Tec Pro",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-1",
+                "name": "Vivano Tec Pro 1",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-2",
+                "name": "Vivano Tec Pro 2",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-3",
+                "name": "Vivano Tec Pro 3",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-4",
+                "name": "Vivano Tec Pro 4",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-5",
+                "name": "Vivano Tec Pro 5",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-6",
+                "name": "Vivano Tec Pro 6",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-7",
+                "name": "Vivano Tec Pro 7",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            }
+        ]
+    },
+    {
+        "id": "8682c29b-bf82-45db-b0b3-64cf3871807",
+        "group_name": "Curativos",
+        "products_list": [
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-8",
+                "name": "Vivano Tec Pro 8",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-9",
+                "name": "Vivano Tec Pro 9",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-10",
+                "name": "Vivano Tec Pro 10",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-11",
+                "name": "Vivano Tec Pro 11",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-12",
+                "name": "Vivano Tec Pro 12",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-13",
+                "name": "Vivano Tec Pro 13",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            }
+        ]
+    },
+    {
+        "id": "8682c29b-bf82-45db-b0b3-64cf387180",
+        "group_name": "Saneantes",
+        "products_list": [
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-14",
+                "name": "Vivano Tec Pro 14",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-15",
+                "name": "Vivano Tec Pro 15",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-16",
+                "name": "Vivano Tec Pro 16",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-17",
+                "name": "Vivano Tec Pro 17",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-18",
+                "name": "Vivano Tec Pro 18",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-19",
+                "name": "Vivano Tec Pro 19",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            }
+        ]
+    },
+    {
+        "id": "8682c29b-bf82-45db-b0b3-64cf38718",
+        "group_name": "Correlatos",
+        "products_list": [
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-20",
+                "name": "Vivano Tec Pro 20",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-21",
+                "name": "Vivano Tec Pro-21",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            },
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-22",
+                "name": "Vivano Tec Pro-22",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            }
+        ]
+    },
+    {
+        "id": "8682c29b-bf82-45db-b0b3-64cf3871",
+        "group_name": "Medicamentos",
+        "products_list": [
+            {
+                "id": "4b4a5fad-ef06-4987-b4fb-fe0c0839ddc7",
+                "image": "https://i.postimg.cc/hPN5ZDRk/unidade-vivanotec-pro-11.png",
+                "imageId": "file-a9d1a015-dc06-43c6-9386-cc3395fee838.png",
+                "route": "vivano-tec-pro-23",
+                "name": "Vivano Tec Pro-23",
+                "link": "https://google.com",
+                "summary": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação.",
+                "whatsapp": "https://api.whatsapp.com/send/?phone=+5511930209934&text=Ol%C3%A1%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20produto%20Teste",
+                "description": "Unidade de Pressão Negativa para o Tratamento de Feridas, portátil, de fácil operação, tela touch screen, com interface intuitiva. Pode ser utilizado para pacientes hospitalizados ou ambulatoriais, permitindo 2 modos de tratamento: contínuo e intermitente (variável) com níveis de pressão de - 20 até - 200 mmHg. Fornece histórico de eventos com informações sobre eventos do equipamento, configurações da terapia e alarmes de mensagens.",
+                "productsGroupsId": "8682c29b-bf82-45db-b0b3-64cf3871807a"
+            }
+        ]
+    }
+]
+}

@@ -2,6 +2,7 @@
 import Image from 'next/image'
 
 import goBack from '@/assets/icons/goBack.svg'
+import products_data from '../products.json'
 
 import styles from './styles.module.css'
 import BASE_URL from '@/hooks/axios'
@@ -16,8 +17,9 @@ interface IProduct {
 }
 
 async function getData({ route } : { route: string }) {
-  return BASE_URL.get<IProduct>(`/find-product/${route}`)
-    .then((data) => data.data)
+  const findProduct = products_data.data.find(group => group.products_list.find(product => product.route === route))
+  
+  return findProduct?.products_list[0]
 }
 
 async function ProductsDetails ({ params }: { params: { route: string } }) {
@@ -40,31 +42,31 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
 
       <div className={styles.products_details_container}>
         <img
-          alt={`imagem do produto ${data.name}`}
-          src={data.image}
+          alt={`imagem do produto ${data?.name}`}
+          src={data?.image}
           className={styles.product_image}
         />
         <div>
           <div className={styles.text_container}>
             <p className={styles.title}>
-              {data.name}
+              {data?.name}
             </p>
             <p className={styles.text}>
-              {data.description}
+              {data?.description}
             </p>
           </div>
 
           <div className={styles.buttons_container}>
             <a
               className={styles.contac_button}
-              href={data.link}
+              href={data?.link}
               target='_blank'
               >
               Entrar em contato
             </a>
             <a className={styles.catalog_button}
               target='_blank'
-              href={data.link}
+              href={data?.link}
             >
               Baixar catálogo
             </a>

@@ -1,0 +1,85 @@
+{
+  "data": {
+    "banners": [
+      {
+        "id": 0,
+        "image": "https://i.postimg.cc/TP1VJZ1f/Rectangle-59.png",
+        "description": ""
+      },
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/4xBvtJJW/Rectangle-60.png",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/L8HBnqMq/Rectangle-61.png",
+        "description": ""
+      }
+    ],
+    "history": {
+      "title": "Mais de 15 anos de história",
+      "text": "Há mais de 15 anos, estamos envolvidos no cenário de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo o estado de São Paulo. \n\n Asseguramos a melhor experiência desde o primeiro contato, oferecendo uma variedade de produtos de marcas renomadas, tanto nacionais quanto internacionais. \n\n Garantimos agilidade e pontualidade nas entregas por meio de um processo operacional de qualidade rigoroso. \n\n Em 2023, a Medicall teve um crescimento de mais de 70%, e está em constante crescimento."
+    },
+    "team": {
+      "title": "Nossa Equipe",
+      "text": "Nosso time de colaboradores continua crescendo, agora com mais de 40 pessoas dedicadas. Juntos, trabalhamos incansavelmente para oferecer resultados e serviços de excelência aos nossos clientes na Medicall.",
+      "image": "https://i.postimg.cc/3NQr1CR6/e4bdade24efa4155a16aefc2306373bf.jpg"
+    },
+    "space": {
+      "title": "Nosso Espaço",
+      "text": "Estamos em um prédio de 3 andares próprio de nossa empresa. Com um galpão de armazenamento de produtos com uma equipe de logistica preparada. Hoje nosso prédio comporta mais de 50 pessoas trabalhando para entregar o melhor serviço aos nossos clientes.",
+      "images": [
+        {
+          "id": 0,
+          "image": "https://i.postimg.cc/pTnLpKby/6cc3b1a18004f66e9ac8ac56622d9899.jpg",
+          "description": ""
+        },
+        {
+          "id": 1,
+          "image": "https://i.postimg.cc/L6MwY996/6cbac0ad428641d9e5317b3574a988c1.jpg",
+          "description": ""
+        },
+        {
+          "id": 2,
+          "image": "https://i.postimg.cc/t44rW7Ly/c5d7498a2fc451d29e8120e8f753b605.jpg",
+          "description": ""
+        }
+      ]
+    },
+    "values": [
+      {
+        "id": 0,
+        "image": "https://i.postimg.cc/G4pTcPYz/Group.png",
+        "title": "Missão",
+        "text": "Qualidade e inovação em favorda vida."
+      },
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/QHhWzZd2/Vector-3.png",
+        "title": "Produtos",
+        "text": "Medicamentos Hospitalares, Equipamentos Médicos e Odontológicos, Materiais Médicos e Hospitalares, Dietas Enterais e Parenterais."
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/nC2QbSsC/Vector-2.png",
+        "title": "Valores",
+        "text": "Lealdade, pertencimento, responsabilidade, comprometimento proatividade e resultados."
+      }
+    ],
+    "directors": [
+      {
+        "id": 0,
+        "image": "https://i.postimg.cc/fTbSdbLR/4e933343c53178612816f1b797d292dc.jpg",
+        "title": "CEO Rogério",
+        "text": "Estamos no mercado de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo estado de São Paulo.\n Oferecemos a melhor experiência de atendimento aos nossos clientes, fornecedores e acionistas, desde o primeiro contato."
+      },
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/QCfBz26D/5310e830d570c2122cafe55c57c12bdd.jpg",
+        "title": "Diretor - Ricardo",
+        "text": "Estamos no mercado de vendas e distribuição de materiais médicos e medicamentos hospitalares em todo estado de São Paulo.\n Oferecemos a melhor experiência de atendimento aos nossos clientes, fornecedores e acionistas, desde o primeiro contato."
+      }
+    ]
+  }
+}

@@ -40,8 +40,8 @@
 }
 
 .product_image {
-  width: 40vw;
-  height: 40vw;
+  width: 20vw;
+  height: 20vw;
   margin-bottom: 35px;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .text {
-  font-size: 14px;
+  font-size: 10px;
   padding-bottom: 30px;
 }
 
@@ -115,7 +115,7 @@
   }
 
   .text {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .contac_button {

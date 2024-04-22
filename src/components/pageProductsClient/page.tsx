@@ -18,10 +18,11 @@ interface IProduct {
   link: string
   description: string
   route: string
+  summary: string
 }
 
 interface IGroups {
-  id: number,
+  id: string,
   group_name: string,
   products_list: IProduct[]
 }
@@ -135,7 +136,7 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
                   className={styles.product_image}
                 />
                 <p className={styles.product_name}>{product.name}</p>
-                <p className={styles.product_description}>{product.description}</p>
+                <p className={styles.product_description}>{product.summary}</p>
                 <div
                   className={styles.product_buttons_container}
                 >

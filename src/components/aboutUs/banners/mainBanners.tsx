@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 import 'swiper/css';
 
 interface IBanners {
-  id: string
+  id: number
   image: string
   description: string
 }

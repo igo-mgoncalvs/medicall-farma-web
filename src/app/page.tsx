@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 import ContactForm from "@/components/form";
-import BASE_URL from "@/hooks/axios";
+import home_data from './home.json'
 
 import styles from "./page.module.css";
 import 'swiper/css';
@@ -59,8 +59,7 @@ interface IHome {
 }
 
 async function getData() { 
-  return await BASE_URL.get<IHome>('/home')
-    .then((response) => response.data)
+  return home_data.data
 }
 export default async function Home() {
   let activeSlide = 0
@@ -81,7 +80,7 @@ export default async function Home() {
           </div>
           <Link
             className={styles.button}
-            href={data.main.button_link}
+            href={'https://google.com'}
           >
             {data.main.button_text}
           </Link>
@@ -136,7 +135,6 @@ export default async function Home() {
           <p className={styles.our_services_title}>{data.our_service.title}</p>
           
           <Services data={data.our_service} />
-
           
         </div>
       </div>

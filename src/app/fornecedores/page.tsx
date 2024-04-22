@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import suppliers_data from './suppliers.json'
 import clients_data from './clients.json'
+import interface_data from './interface.json'
 
 import styles from './styles.module.css'
 import BASE_URL from '@/hooks/axios'
@@ -20,9 +21,9 @@ interface ISuppliersInterface {
 
 async function getData() {
   return await Promise.all([
-    (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
-    (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
-    (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data
+    suppliers_data.suppliers,
+    clients_data.clients,
+    interface_data.data
   ])
 }
 
