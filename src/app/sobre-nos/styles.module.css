@@ -222,7 +222,7 @@
   }
 
   .our_space_text_container {
-    width: 150vw;
+    width: 338vw;
   }
 
   .our_space_title {
@@ -323,6 +323,10 @@
   .our_space_container {
     padding: 50px;
     gap: 80px
+  }
+
+  .our_space_text_container {
+    width: 335vw;
   }
 
   .values_container {
@@ -495,7 +499,7 @@
   }
 
   .our_space_text_container {
-    width: 115vw;
+    width: 268vw;
   }
 
   .our_space_title{

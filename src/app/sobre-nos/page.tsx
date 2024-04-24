@@ -80,7 +80,7 @@ interface IAboutUs {
     id: string
     title: string
     text: string
-    Image: string
+    image: string
     aboutUsId: string
   }[]
   history: {
@@ -178,6 +178,8 @@ async function SobreNos () {
             >
               <Image
                 src={item.image}
+                width={40}
+                height={40}
                 alt='icone dos valores'
                 className={styles.values_icone}
               />
@@ -192,7 +194,7 @@ async function SobreNos () {
         {interfaceData.directors.map((item) => (
           <div key={item.id} className={styles.directors_item}>
             <img
-              src={item.Image}
+              src={item.image}
               alt='imagem do diretor'
               className={styles.directors_image}
             />

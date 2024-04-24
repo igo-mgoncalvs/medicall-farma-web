@@ -125,7 +125,7 @@ export default async function Home() {
         />
       </div>
 
-      <div className={styles.our_services_container}>
+      {/* <div className={styles.our_services_container}>
         <img
           src={data.our_service.image}
           className={styles.our_services_image}
@@ -170,7 +170,7 @@ export default async function Home() {
           className={styles.our_services_image}
           alt=""
         />
-      </div>
+      </div> */}
 
       <div className={styles.catalog_container}>
         <div>
