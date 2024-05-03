@@ -88,10 +88,11 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
+  scroll-behavior: smooth;
 }
 
-.children {
-  margin-bottom: 49px;
+.swiper-wrapper {
+  height: auto !important;
 }
 
 @media (min-width: 768px) {

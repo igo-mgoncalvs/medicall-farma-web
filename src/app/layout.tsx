@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 
 import Header from "@/components/header";
-import MenuMobile from "@/components/menuMobile";
 
 import "./globals.css";
 import BASE_URL from "@/hooks/axios";
@@ -37,7 +36,6 @@ export default async function RootLayout({
         <div className="children">
           {children}
         </div>
-        <MenuMobile />
       </body>
     </html>
   );

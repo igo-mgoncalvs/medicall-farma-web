@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import suppliers_data from './suppliers.json'
-import clients_data from './clients.json'
-
+import React from 'react'
 import styles from './styles.module.css'
 import BASE_URL from '@/hooks/axios'
 
@@ -16,18 +14,26 @@ interface ISuppliersInterface {
   text: string 
   secound_title: string 
   image: string 
+  enable: boolean
+}
+
+interface IPrivacyPolicy {
+  title: string 
+  text: string
+  enable: boolean
 }
 
 async function getData() {
   return await Promise.all([
     (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
     (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
-    (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data
+    (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data,
+    (await BASE_URL.get<IPrivacyPolicy>('/privacy-policy')).data
   ])
 }
 
 async function Suppliers () {
-  const [suppliers, clients, interfaceData] = await getData()
+  const [suppliers, clients, interfaceData, privacyPolicy] = await getData()
 
   return (
     <div>
@@ -47,61 +53,81 @@ async function Suppliers () {
             {interfaceData.title}
           </p>
 
-          <p className={styles.suppliers_text}>
-            {interfaceData.text}
-          </p>
-        </div>
-      </div>
-
-      <div
-        className={styles.suppliers_group}
-      >
-        <div
-          className={styles.suppliers_title_container}
-        >
-        </div>
-
-        <div
-          className={styles.suppliers_list}
-        >
-          {suppliers.map((item) => (
-            <div
-              key={item.id}
-              className={styles.suppliers_logo}
-              style={{
-                backgroundImage: `url(${item.image})`
-              }}
-            />
+          {interfaceData.text.split('\n').map((item) =>(
+            <p className={styles.suppliers_text} key={item}>
+              {item || <br />}
+            </p>
           ))}
         </div>
       </div>
-      
-      <div
-        className={styles.suppliers_group}
-      >
+
+      {suppliers.length > 0 && (
         <div
-          className={styles.suppliers_title_container}
+          className={styles.suppliers_group}
         >
-          <p
-            className={`${styles.suppliers_title} ${styles.suppliers_title_section}`}
+          <div
+            className={styles.suppliers_title_container}
           >
-            {interfaceData.secound_title}
-          </p>
-        </div>
+          </div>
 
-        <div
-          className={`${styles.suppliers_list} ${styles.suppliers_list_background}`}
-        >
-          {clients.map((item) => (
-            <div
-              key={item.id}
-              className={styles.suppliers_logo}
-              style={{
-                backgroundImage: `url(${item.image})`
-              }}
-            />
-          ))}
+          <div
+            className={styles.suppliers_list}
+          >
+            {suppliers.map((item) => (
+              <div
+                key={item.id}
+                className={styles.suppliers_logo}
+                style={{
+                  backgroundImage: `url(${item.image})`
+                }}
+              />
+            ))}
+          </div>
         </div>
+        )
+      }
+      
+      {clients.length > 0 && (
+        <div
+          className={styles.suppliers_group}
+        >
+          <div
+            className={styles.suppliers_title_container}
+          >
+            <p
+              className={`${styles.suppliers_title} ${styles.suppliers_title_section}`}
+            >
+              {interfaceData.secound_title}
+            </p>
+          </div>
+
+          <div
+            className={`${styles.suppliers_list} ${styles.suppliers_list_background}`}
+          >
+            {clients.map((item) => (
+              <div
+                key={item.id}
+                className={styles.suppliers_logo}
+                style={{
+                  backgroundImage: `url(${item.image})`
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div
+        className={styles.privacy_policy_container}
+        id='politica-de-privacidade'
+      >
+        <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
+
+        {privacyPolicy.text.split('\n').map((item) =>(
+          <p className={styles.suppliers_text} key={item}>
+            {item || <br />}
+          </p>
+        ))}
       </div>
     </div>
   )

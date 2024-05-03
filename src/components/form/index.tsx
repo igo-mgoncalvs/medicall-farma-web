@@ -63,7 +63,13 @@ function ContactForm () {
         <Controller
           name="email"
           control={control}
-          render={({field: { onChange, value }}) => (
+          rules={{
+            required: {
+              value: true,
+              message: 'Esse campo é obrigatório'
+            }
+          }}
+          render={({field: { onChange, value }, fieldState: { error }}) => (
             <input
               className={styles.input}
               value={value}
@@ -75,7 +81,13 @@ function ContactForm () {
         <Controller
           name="phone"
           control={control}
-          render={({field: { onChange, value }}) => (
+          rules={{
+            required: {
+              value: true,
+              message: 'Esse campo é obrigatório'
+            }
+          }}
+          render={({field: { onChange, value }, fieldState: { error }}) => (
             <input
               className={styles.input}
               value={value}
@@ -111,7 +123,13 @@ function ContactForm () {
         <Controller
           name="description"
           control={control}
-          render={({field: { onChange, value }}) => (
+          rules={{
+            required: {
+              value: true,
+              message: 'Esse campo é obrigatório'
+            }
+          }}
+          render={({field: { onChange, value }, fieldState: { error }}) => (
             <textarea
               onChange={onChange}
               value={value}

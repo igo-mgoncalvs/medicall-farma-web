@@ -3,7 +3,7 @@
   flex-direction: column;
   background: linear-gradient(90deg, #0E66CA 0%, #0081FF 100%);
   color: #fff;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .products_search_bar {
@@ -97,10 +97,6 @@
 }
 
 @media (min-width: 768px) {
-  .products_container {
-    min-height: 88.5vh;
-  }
-
   .products_search_bar {
     width: 45%;
   }
@@ -185,7 +181,6 @@
 @media (min-width: 2560px) {
   .products_container {
     padding-top: 40px;
-    min-height: 86.4vh;
   }
 
   .products_search_bar {

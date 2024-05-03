@@ -49,9 +49,11 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
             <p className={styles.title}>
               {data.name}
             </p>
-            <p className={styles.text}>
-              {data.description}
-            </p>
+            {data.description.split('\n').map((item) =>(
+              <p className={styles.text} key={item}>
+                {item || <br />}
+              </p>
+            ))}
           </div>
 
           <div className={styles.buttons_container}>

@@ -22,6 +22,7 @@ export default function MainBanners({ data }: { data: IBanners[] }) {
         }}
         spaceBetween={30}
         modules={[Autoplay]}
+        className={styles.container}
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
