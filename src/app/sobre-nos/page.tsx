@@ -1,73 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState } from 'react'
 
 import Image from 'next/image';
 
-import mission from '@/assets/icons/mission.svg'
-import products from '@/assets/icons/products.svg'
-import values from '@/assets/icons/values.svg'
 import MainBanners from '@/components/aboutUs/banners/mainBanners';
 import SpaceBanners from '@/components/aboutUs/spaceBanners/spaceBanners';
 import BASE_URL from '@/hooks/axios';
 
 import styles from './styles.module.css'
-
-const banners_data = [
-  {
-    id: 0,
-    image: 'https://i.postimg.cc/TP1VJZ1f/Rectangle-59.png',
-    description: ''
-  },
-  {
-    id: 1,
-    image: 'https://i.postimg.cc/4xBvtJJW/Rectangle-60.png',
-    description: ''
-  },
-  {
-    id: 2,
-    image: 'https://i.postimg.cc/L8HBnqMq/Rectangle-61.png',
-    description: ''
-  }
-]
-
-const space_data = [
-  {
-    id: 0,
-    image: 'https://i.postimg.cc/pTnLpKby/6cc3b1a18004f66e9ac8ac56622d9899.jpg',
-    description: ''
-  },
-  {
-    id: 1,
-    image: 'https://i.postimg.cc/L6MwY996/6cbac0ad428641d9e5317b3574a988c1.jpg',
-    description: ''
-  },
-  {
-    id: 2,
-    image: 'https://i.postimg.cc/t44rW7Ly/c5d7498a2fc451d29e8120e8f753b605.jpg',
-    description: ''
-  }
-]
-
-const values_data = [
-  {
-    id: 0,
-    image: mission,
-    title: 'Missão',
-    text: 'Qualidade e inovação em favorda vida.'
-  },
-  {
-    id: 1,
-    image: products,
-    title: 'Produtos',
-    text: 'Medicamentos Hospitalares, Equipamentos Médicos e Odontológicos, Materiais Médicos e Hospitalares, Dietas Enterais e Parenterais.'
-  },
-  {
-    id: 2,
-    image: values,
-    title: 'Valores',
-    text: 'Lealdade, pertencimento, responsabilidade, comprometimento proatividade e resultados.'
-  }
-]
 
 interface IAboutUs {
   banners: {
@@ -115,14 +57,22 @@ interface IAboutUs {
   }[]
 }
 
-async function getData() {
-  return await BASE_URL.get<IAboutUs>('about-us-interface')
-}
 
-async function SobreNos () {
-  const interfaceData = (await getData()).data
+function SobreNos () {
+  const [interfaceData, setInterfaceData] = useState<IAboutUs>()
 
-  return (
+  async function getData() {
+    return await BASE_URL.get<IAboutUs>('about-us-interface')
+      .then(({data}) => {
+        setInterfaceData(data)
+      })
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  return interfaceData && (
     <div>
       {interfaceData.banners.length > 0 && (
         <MainBanners data={interfaceData.banners} />

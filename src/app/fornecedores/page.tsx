@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 import BASE_URL from '@/hooks/axios'
 
@@ -23,19 +25,33 @@ interface IPrivacyPolicy {
   enable: boolean
 }
 
-async function getData() {
-  return await Promise.all([
-    (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
-    (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
-    (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data,
-    (await BASE_URL.get<IPrivacyPolicy>('/privacy-policy')).data
-  ])
-}
 
-async function Suppliers () {
-  const [suppliers, clients, interfaceData, privacyPolicy] = await getData()
+function Suppliers () {
+  const [suppliers, setSuppliers] = useState<IClientsAndSuppliers[]>()
+  const [clients, setClients] = useState<IClientsAndSuppliers[]>()
+  const [interfaceData, setInterfaceData] = useState<ISuppliersInterface>()
+  const [privacyPolicy, setPrivacyPolicy] = useState<IPrivacyPolicy>()
+  
+  async function getData() {
+    return await Promise.all([
+      (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
+      (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
+      (await BASE_URL.get<ISuppliersInterface>('/suppliers-interface')).data,
+      (await BASE_URL.get<IPrivacyPolicy>('/privacy-policy')).data
+    ])
+      .then(([getSuppliers, getClients, getInterfaceData, getPrivacyPolicy]) => {
+        setSuppliers(getSuppliers)
+        setClients(getClients)
+        setInterfaceData(getInterfaceData)
+        setPrivacyPolicy(getPrivacyPolicy)
+      })
+  }
 
-  return (
+  useEffect(() => {
+    getData()
+  }, [])
+
+  return (suppliers && clients && interfaceData && privacyPolicy) && (
     <div>
       <div
         className={styles.suppliers_infos_container}

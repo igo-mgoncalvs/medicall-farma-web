@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 
 import PageProductsClient from '@/components/pageProductsClient/page';
 import BASE_URL from '@/hooks/axios';
@@ -9,6 +11,8 @@ interface IProduct {
   name: string
   link: string
   description: string
+  route: string
+  summary: string
 }
 
 interface IGroups {
@@ -17,15 +21,20 @@ interface IGroups {
   products_list: IProduct[]
 }
 
-async function getData() {
-  return await BASE_URL.get<IGroups[]>('/products')
-  .then((response) => response.data)
-}
 
-async function Products () {
-  const data = await getData()
+function Products () {
+  const [data, setData] = useState<IGroups[]>()
 
-  return (
+  async function getData() {
+    return await BASE_URL.get<IGroups[]>('/products')
+    .then((response) => setData(response.data))
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  return data && (
     <PageProductsClient data={data} />
   )
 }

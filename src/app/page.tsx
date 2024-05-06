@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+'use client'
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import ContactForm from "@/components/form";
@@ -7,7 +9,6 @@ import BASE_URL from "@/hooks/axios";
 
 import styles from "./page.module.css";
 import 'swiper/css';
-import Services from "@/components/services";
 import Image from "next/image";
 
 interface IProducts {
@@ -52,15 +53,19 @@ interface IHome {
   },
 }
 
-async function getData() { 
-  return await BASE_URL.get<IHome>('/home')
-    .then((response) => response.data)
-}
-export default async function Home() {
+export default function Home() {
+  const [data, setData] = useState<IHome>()
 
-  const data = await getData()
+  async function getData() { 
+    return await BASE_URL.get<IHome>('/home')
+      .then((response) => setData(response.data))
+  }
 
-  return (
+  useEffect(() => {
+    getData()
+  }, [])
+
+  return data && (
     <div>
       {data.main.enable && (
         <div className={styles.about_us}>
