@@ -30,7 +30,7 @@ export default async function RootLayout({
   const contact_link = await getData()
 
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={`${inter.className} ${montserrat.variable}`}>
         <Header contact={contact_link.link}/>
         <div className="children">

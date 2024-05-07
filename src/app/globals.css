@@ -86,7 +86,7 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #000;
   background: #fff;
   scroll-behavior: smooth;
 }
@@ -105,11 +105,5 @@ body {
 @media (min-width: 2560px) {
   .children {
     margin-top: 150px;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: light;
   }
 }

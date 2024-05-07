@@ -55,10 +55,17 @@ interface IHome {
 
 export default function Home() {
   const [data, setData] = useState<IHome>()
+  const [productsList, setProductsList] = useState<IProducts[]>()
 
   async function getData() { 
-    return await BASE_URL.get<IHome>('/home')
-      .then((response) => setData(response.data))
+    Promise.all([
+      BASE_URL.get<IHome>('/home'),
+      BASE_URL.get<IProducts[]>('/home-products-list'),
+    ])
+      .then(([home, products]) => {
+        setData(home.data)
+        setProductsList(products.data)
+      })
   }
 
   useEffect(() => {
@@ -131,7 +138,7 @@ export default function Home() {
         <div className={styles.products_container}>
           <div>
             <p className={styles.products_title}>
-              Nossos produtos
+              {data.products?.title}
             </p>
 
             <span className={styles.products_line} />
@@ -140,13 +147,7 @@ export default function Home() {
           <div className={styles.products_list_container}>
             <div className={styles.products_itens_container}>
               <div className={styles.products_list}>
-                {[
-                  {id: 0, name: 'Equipamentos Hospitalares;'},
-                  {id: 1, name: 'Curativos;'},
-                  {id: 2, name: 'Saneantes;'},
-                  {id: 3, name: 'Correlatos;'},
-                  {id: 4, name: 'Medicamentos;'},
-                ].map((item) => (
+                {productsList?.map((item) => (
                   <div
                     key={item.id}
                     className={styles.products_list_item}
@@ -158,7 +159,7 @@ export default function Home() {
               </div>
 
               <Image
-                src="https://i.postimg.cc/y8gg10Th/Rectangle-41-1.png"
+                src={data.products.image}
                 width={100}
                 height={100}
                 alt=""
@@ -166,11 +167,12 @@ export default function Home() {
               />
 
             </div>
-            <button
+            <a
               className={styles.products_button}
+              href={data.products.button_link}
             >
-              Conhecer Produtos
-            </button>
+              {data.products.button_text}
+            </a>
           </div>
         </div>
       )}

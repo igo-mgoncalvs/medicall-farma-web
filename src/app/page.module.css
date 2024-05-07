@@ -179,6 +179,10 @@
   padding: 6px;
   width: 45%;
   cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  justify-content: center;
 }
 
 .catalog_container {

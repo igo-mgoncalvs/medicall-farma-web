@@ -73,7 +73,7 @@ function SobreNos () {
   }, [])
 
   return interfaceData && (
-    <div>
+    <div className={styles.container}>
       {interfaceData.banners.length > 0 && (
         <MainBanners data={interfaceData.banners} />
       )}

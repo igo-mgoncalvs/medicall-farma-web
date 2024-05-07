@@ -59,12 +59,14 @@
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
+  color: #000
 }
 
 .product_description {
   font-size: 10px;
   font-weight: 300;
   margin-bottom: 22px;
+  color: #000;
 }
 
 .product_buttons_container {
