@@ -26,13 +26,13 @@ interface IPrivacyPolicy {
 }
 
 
-function Suppliers () {
+function SuppliersScreen () {
   const [suppliers, setSuppliers] = useState<IClientsAndSuppliers[]>()
   const [clients, setClients] = useState<IClientsAndSuppliers[]>()
   const [interfaceData, setInterfaceData] = useState<ISuppliersInterface>()
   const [privacyPolicy, setPrivacyPolicy] = useState<IPrivacyPolicy>()
   
-  async function getData() {
+   const getData = async () => {
     return await Promise.all([
       (await BASE_URL.get<IClientsAndSuppliers[]>('/suppliers')).data,
       (await BASE_URL.get<IClientsAndSuppliers[]>('/clients')).data,
@@ -140,7 +140,7 @@ function Suppliers () {
         <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
 
         {privacyPolicy.text.split('\n').map((item) =>(
-          <p className={styles.suppliers_text} key={item}>
+          <p key={item}>
             {item || <br />}
           </p>
         ))}
@@ -149,4 +149,4 @@ function Suppliers () {
   )
 }
 
-export default Suppliers
+export default SuppliersScreen
