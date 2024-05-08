@@ -64,12 +64,14 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
               >
               Entrar em contato
             </a>
-            <a className={styles.catalog_button}
-              target='_blank'
-              href={data.link}
-            >
-              Baixar catálogo
-            </a>
+            {data.link && (
+              <a className={styles.catalog_button}
+                target='_blank'
+                href={data.link}
+              >
+                Baixar catálogo
+              </a>
+            )}
           </div>
         </div>
       </div>

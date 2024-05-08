@@ -73,6 +73,10 @@
   margin-bottom: 2vw;
 }
 
+.policy_text {
+  color: #fff;
+}
+
 @media (min-width: 375px) {
   .suppliers_list {
     grid:  auto-flow / repeat(3, 1fr) ;

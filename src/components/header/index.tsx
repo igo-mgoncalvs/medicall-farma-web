@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation';
 import { Drawer } from '@mui/material';
 import Link from 'next/link';
@@ -10,12 +10,28 @@ import menu from '@/assets/icons/Frame.svg'
 
 import styles from './styles.module.css'
 import Image from 'next/image';
+import BASE_URL from '@/hooks/axios';
+import { ILogos } from '@/utils/interfaces';
+
 
 function Header ({ contact } : { contact: string }) {
   const [open, setOpen] = useState(false)
+  const [logoColor, setLogoColor] = useState<string>('')
 
   const pathname = usePathname()
   const route = pathname.replace('/', '') || 'home'
+
+  const getLogo = async () => {
+    BASE_URL.get<ILogos>('/logos')
+      .then(({data}) => {
+        setLogoColor(data.logoColor)
+      })
+  }
+
+
+  useEffect(() => {
+    getLogo()
+  }, [])
 
   const routes = [
     {
@@ -53,7 +69,7 @@ function Header ({ contact } : { contact: string }) {
     <div className={styles.main}>
       <img 
         alt="logo-medicall-farma"
-        src={'https://i.postimg.cc/bN2Rw5BB/Logo-Medicall-Horizontal-Cor-1.png'}
+        src={logoColor}
         className={styles.logo}
       />
 

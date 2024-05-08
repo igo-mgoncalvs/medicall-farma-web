@@ -5,6 +5,7 @@ import Header from "@/components/header";
 
 import "./globals.css";
 import BASE_URL from "@/hooks/axios";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat', display: 'swap', });
@@ -36,6 +37,8 @@ export default async function RootLayout({
         <div className="children">
           {children}
         </div>
+
+        <Footer />
       </body>
     </html>
   );

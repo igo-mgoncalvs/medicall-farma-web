@@ -140,7 +140,7 @@ function SuppliersScreen () {
         <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
 
         {privacyPolicy.text.split('\n').map((item) =>(
-          <p key={item}>
+          <p key={item} className={styles.policy_text}>
             {item || <br />}
           </p>
         ))}
