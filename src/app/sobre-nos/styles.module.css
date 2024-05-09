@@ -95,7 +95,7 @@
   justify-content: center;
   background-image: linear-gradient(to right, #0E66CA, #0081FF);
   color: #fff;
-  padding: 20px 12px;
+  padding: 25px 20px;
 }
 
 .values_line {
@@ -112,7 +112,7 @@
 .values_list {
   display: grid;
   grid: auto-flow / repeat(1, 1fr);
-  gap: 20px;
+  gap: 40px;
   margin: 0 40px;
   margin-top: 5px;
 }

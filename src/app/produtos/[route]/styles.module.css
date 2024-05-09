@@ -1,14 +1,10 @@
 .product_goBack_container {
-  position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  top: 15%;
-  left: 5%;
   color: #fff;
   font-weight: 600;
   text-decoration: none;
+  margin-left: 15px;
 }
 
 .product_goBack_container:hover {
@@ -18,14 +14,22 @@
 .product_goBack_icon {
   width: 15px;
   height: 15px;
+  margin-right: 8px;
 }
 
 .products_details{
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   background: linear-gradient(90deg, #0E66CA 0%, #0081FF 100%);
-  padding: 15% 0;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.product_container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
 
 .products_details_container {

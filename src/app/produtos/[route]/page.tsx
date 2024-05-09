@@ -38,40 +38,42 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
         <p>Voltar</p>
       </Link>
 
-      <div className={styles.products_details_container}>
-        <img
-          alt={`imagem do produto ${data.name}`}
-          src={data.image}
-          className={styles.product_image}
-        />
-        <div>
-          <div className={styles.text_container}>
-            <p className={styles.title}>
-              {data.name}
-            </p>
-            {data.description.split('\n').map((item) =>(
-              <p className={styles.text} key={item}>
-                {item || <br />}
+      <div className={styles.product_container}>
+        <div className={styles.products_details_container}>
+          <img
+            alt={`imagem do produto ${data.name}`}
+            src={data.image}
+            className={styles.product_image}
+          />
+          <div>
+            <div className={styles.text_container}>
+              <p className={styles.title}>
+                {data.name}
               </p>
-            ))}
-          </div>
+              {data.description.split('\n').map((item) =>(
+                <p className={styles.text} key={item}>
+                  {item || <br />}
+                </p>
+              ))}
+            </div>
 
-          <div className={styles.buttons_container}>
-            <a
-              className={styles.contac_button}
-              href={data.link}
-              target='_blank'
-              >
-              Entrar em contato
-            </a>
-            {data.link && (
-              <a className={styles.catalog_button}
-                target='_blank'
+            <div className={styles.buttons_container}>
+              <a
+                className={styles.contac_button}
                 href={data.link}
-              >
-                Baixar catálogo
+                target='_blank'
+                >
+                Entrar em contato
               </a>
-            )}
+              {data.link && (
+                <a className={styles.catalog_button}
+                  target='_blank'
+                  href={data.link}
+                >
+                  Baixar catálogo
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>

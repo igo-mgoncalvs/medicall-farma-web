@@ -67,11 +67,13 @@ function Header ({ contact } : { contact: string }) {
   ]
   return (
     <div className={styles.main}>
-      <img 
-        alt="logo-medicall-farma"
-        src={logoColor}
-        className={styles.logo}
-      />
+        <Image 
+          alt="logo-medicall-farma"
+          src={logoColor}
+          width={100}
+          height={100}
+          className={logoColor ? styles.logo : styles.logoDisable}
+        />
 
       <div
         className={styles.pages_container}

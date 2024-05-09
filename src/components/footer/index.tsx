@@ -6,6 +6,7 @@ import { ILogos } from "@/utils/interfaces"
 import { useEffect, useState } from "react"
 
 import styles from './styles.module.css'
+import Image from "next/image"
 
 export default function Footer () {
   const [logoWhite, setLogoWhite] = useState<string>('')
@@ -21,11 +22,13 @@ export default function Footer () {
     getLogo()
   }, [])
 
-  return (
+  return logoWhite && (
     <footer className={styles.footer}>
-      <img
+      <Image
         src={logoWhite}
         alt="logo branco"
+        width={100}
+        height={100}
         className={styles.logo}
       />
     </footer>
