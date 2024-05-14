@@ -1,3 +1,11 @@
+.static_background {
+  width: 100vw;
+  height: 215px;
+  background-repeat: no-repeat;
+  background-position: -1000px;
+  background-size: contain;
+}
+
 .about_us {
   color: #fff;
   background-image: linear-gradient(#0360CE, #0081FF);
@@ -45,7 +53,6 @@
 .banner {
   border-radius: 60px 0 0 0;
   width: 310px;
-  height: 215px;
 }
 
 .welcome_container {
@@ -53,6 +60,10 @@
   padding: 30px 12px;
   gap: 22px
 }
+
+.welcome_left_side {
+  max-width: 340px;
+} 
 
 .welcome_line_after {
   width: 20%;
@@ -73,6 +84,8 @@
 
 .welcome_title {
   font-size: 19px;
+  font-weight: var(--font-montserrat);
+  font-weight: 600;
 }
 
 .welcome_title_color {
@@ -85,7 +98,6 @@
 .welcome_text {
   font-size: 12px;
   font-weight: 400;
-  margin-right: 47px;
 }
 
 .welcome_button {
@@ -100,8 +112,8 @@
 .welcome_image {
   display: none;
   border-radius: 15px;
-  width: 140px;
-  height: 140px;
+  width: 400px;
+  height: 180px;
 }
 
 .products_container {
@@ -129,20 +141,22 @@
 
 .products_list_container {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .products_itens_container {
   display: flex;
-  justify-content: space-around;
-  gap: 60px
+  flex-direction: column;
+  gap: 28px;
 }
 
 .products_list {
   display: flex;
-  gap: 14px;
+  justify-content: space-between;
   flex-direction: column;
+  gap: 4px
 }
 
 .products_list_item {
@@ -165,6 +179,7 @@
 
 .products_image {
   width: 45vw;
+  max-width: 200px;
   height: max-content;
   border-radius: 4px;
 }
@@ -174,10 +189,8 @@
   font-weight: 600;
   background-color: #fff;
   border: none;
-  align-self: center;
   border-radius: 6px;
   padding: 6px;
-  width: 45%;
   cursor: pointer;
   text-decoration: none;
   color: #000;
@@ -250,9 +263,46 @@
   background-image: linear-gradient(to right, #1C7DDC, #A7D3FF);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 375px) {
+  .static_background {
+    background-position: right;
+  }
+
   .infos_container {
-    margin-left: 50px;
+    max-width: 195px;
+  }
+}
+
+@media (min-width: 425px) {
+  .infos_container {
+    max-width: 230px;
+  }
+
+  .products_button {
+    width: 80%;
+  }
+}
+
+@media (min-width: 540px) {
+  .infos_container {
+    max-width: 325px;
+  }
+
+  .welcome_image {
+    display: block;
+    border-radius: 15px;
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .static_background {
+    height: 325px;
+  }
+
+  .infos_container {
+    margin-left: 10vw;
     margin-right: 50px;
     justify-content: center;
   }
@@ -263,12 +313,12 @@
 
   .text {
     font-size: 15px;
-    margin-right: 50px;
+    max-width: 258px;
   }
 
   .banner {
     height: 330px;
-    width: 350px;
+    width: 250px;
   }
 
   .button {
@@ -276,9 +326,14 @@
     padding: 10px 25px;
   }
 
+  .about_us {
+    justify-content: space-between;
+  }
+
   .welcome_container {
-    margin-left: 30px;
-    margin-bottom: 25px;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 
   .welcome_title {
@@ -292,9 +347,8 @@
 
   .welcome_image {
     display: block;
-    width: 46vw;
+    width: 345px;
     height: 100%;
-    border-radius: 0;
   }
 
   .welcome_line_before {
@@ -306,8 +360,9 @@
     font-size: 20px;
   }
 
-  .products_list_container {
-    justify-content: space-around;
+  .products_container {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 
   .products_title {
@@ -320,7 +375,9 @@
   }
 
   .products_image {
-    width: 24vw;
+    width: 87vw;
+    max-width: 284px;
+    border-radius: 15px;
   }
 
   .products_button {
@@ -331,7 +388,8 @@
 
   .catalog_container {
     justify-content: space-between;
-    padding: 40px 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 
   .catalog_title {
@@ -353,6 +411,10 @@
     border-radius: 74px 74px 0 0 ;
   }
 
+  .divider {
+    margin-left: 6%;
+  }
+
   .contact_form_container {
     margin: 25px 0;
   }
@@ -366,13 +428,19 @@
   .about_us {
     justify-content: space-between;
   }
-
+  
+  .static_background {
+    height: 490px;
+  }
+  
   .infos_container {
-    gap: 40px
+    gap: 40px;
+    margin-left: 12vw;
+    margin-top: 60px;
   }
 
   .banner {
-    width: 320px;
+    width: 285px;
     height: 480px;
   }
 
@@ -385,8 +453,13 @@
   }
 
   .text {
-    width: 37vw;
+    width: 33vw;
     font-size: 18px;
+    max-width: 290px;
+  }
+
+  .button {
+    font-size: 15px;
   }
 
   .contact_form_title {
@@ -395,23 +468,41 @@
 
   .contact_form_container {
     position: absolute;
-    top: 11%;
-    right: 23.5%;
+    top: 13%;
+    right: 20%;
     width: 35vw;
   }
   
   .welcome_container {
     padding: 0;
     margin: 50px;
-    gap: 26px
+    justify-content: space-between;
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+
+  .welcome_left_side {
+    max-width: 35vw;
+    max-width: 400px;
   }
 
   .welcome_button {
-    border-radius: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 8px 15px;
+  }
+
+  .welcome_image {
+    border-radius: 14px;
+    width: 37vw;
+    max-width: 380px;
   }
 
   .products_container {
     padding: 40px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    gap: 40px
   }
 
   .products_title {
@@ -420,7 +511,11 @@
 
   .products_itens_container {
     justify-content: space-around;
-    gap: 150px
+    gap: 50px
+  }
+
+  .products_list {
+    gap: 15px
   }
 
   .products_list_item {
@@ -428,24 +523,30 @@
   }
 
   .products_button {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+
+  .products_image {
+    max-width: 390px;
   }
 
   .catalog_container {
-    justify-content: space-around;
+    padding-left: 12vw;
+    padding-right: 12vw;
   }
 
   .catalog_title {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .catalog_text {
     font-size: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 
   .catalog_button {
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px 25px;
   }
   
@@ -460,9 +561,15 @@
 }
 
 @media (min-width: 1440px) {
+  .static_background {
+    height: 712px;
+  }
+
   .infos_container {
-    margin-left: 67px;
     justify-content: flex-start;
+    width: 1250px;
+    margin: 80px auto;
+    max-width: 1250px;
   }
 
   .text_container {
@@ -481,6 +588,7 @@
 
   .text {
     font-size: 30px;
+    max-width: 500px;
   }
 
   .button {
@@ -489,13 +597,14 @@
   }
 
   .contact_form_container {
-    top: 20%;
-    right: 20%;
+    top: 13%;
+    right: 12vw
   }
 
   .welcome_container {
-    gap: 78px;
-    margin: 70px;
+    margin: 80px auto;
+    justify-content: space-between;
+    max-width: 1250px;
   }
   
   .welcome_title {
@@ -504,26 +613,51 @@
   }
   
   .welcome_text {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     padding: 22px 0;
+    max-width: 460px;
   }
 
   .welcome_button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 13px 25px;
   }
 
   .welcome_image {
-    width: 40vw;
+    width: 38vw;
+    max-width: 580px;
   }
 
   .welcome_line_before {
     margin-bottom: 67px;
   }
 
+  .welcome_left_side {
+    max-width: 470px
+  }
+
+  .products_container {
+    padding: 40px 0;
+  }
+
   .products_title {
     font-size: 24px;
+  }
+
+  .products_list_container {
+    margin: 40px auto;
+    justify-content: space-between;
+    max-width: 1250px;
+  }
+
+  .products_list {
+    justify-content: flex-start;
+    gap: 28px
+  }
+
+  .products_itens_container {
+    width: 356px;
   }
 
   .products_list_item {
@@ -531,45 +665,69 @@
   }
 
   .products_button {
-    padding: 12px;
+    font-size: 18px;
+    padding: 12px 30px;
+    max-width: 480px;
+  }
+
+  .products_image {
+    max-width: 580px;
+  }
+
+  .catalog_container {
+    justify-content: space-between;
+    gap: 15vw;
+    margin: 40px auto;
+    padding: 0;
+    max-width: 1250px;
+  }
+
+  .catalog_title {
+    font-size: 35px;
+  }
+
+  .catalog_text {
+    font-size: 25px;
+    margin-bottom: 55px;
   }
 
   .catalog_image {
     border-radius: 132px 132px 0 0;
+    max-width: 435px;
+  }
+
+  .catalog_button {
+    font-size: 24px;
+    padding: 10px 28px;
   }
 }
 
 @media (min-width: 2560px) {
-  .about_us {
-    gap: 2px
+  .static_background {
+    height: 828px;
   }
 
   .infos_container {
-    margin-left: 8%;
-    gap: 10%
+    width: 1500px;
+    max-width: 1500px;
+  }
+
+  .title {
+    font-size: 60px;
   }
 
   .text {
-    width: 30vw;
-  }
-
-  .button {
-    font-size: 30px;
-  }
-
-  .banner {
-    width: 22%;
-    height: 28%;
-  }
-
-  .contact_form_container {
-    top: 15%
+    font-size: 35px;
+    max-width: 700px;
   }
 
   .welcome_container {
-    margin-left: 8%;
-    margin-right: 8%;
-    gap: 12%
+    max-width: 1500px;
+    margin: 80px auto;
+  }
+
+  .welcome_left_side {
+    max-width: 800px;
   }
 
   .welcome_title {
@@ -577,75 +735,66 @@
   }
 
   .welcome_text {
-    font-size: 35px;
+    max-width: 800px;
+    font-size: 30px;
+  }
+
+  .welcome_image {
+    max-width: 648px;
   }
 
   .welcome_button {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .products_container {
-    padding: 80px;
+    padding: 80px 0;
   }
 
   .products_title {
-    font-size: 50px;
-  }
-
-  .products_list_container {
-    margin-top: 40px;
-  }
-
-  .products_list {
-    gap: 50px;
-  }
-
-  .products_list_item {
     font-size: 40px;
   }
 
+  .products_list_container {
+    max-width: 1500px;
+  }
+
   .products_itens_container {
-    gap: 500px
+    width: 486px;
+  }
+  
+  .products_list_item {
+    font-size: 30px;
+    gap: 20px
   }
 
   .products_list_item span {
-    width: 20px;
-    height: 4px;
-    margin-right: 15px;
-  }
-
-  .products_button {
-    border-radius: 20px;
-    padding: 25px;
-    font-size: 35px;
-    width: 36%;
-    margin-top: 50px;
-  }
-
-  .catalog_container{
-    padding: 4% 8%;
+    width: 18px;
+    height: 5px;
   }
   
-  .catalog_title {    
-    font-size: 55px;
-    margin-bottom: 18px;
-    padding-top: 30%;
-    font-weight: 600;
+  .products_button {
+    font-size: 30px;
+  }
+
+  .catalog_container {
+    max-width: 1500px;
+    margin: 80px auto;
+  }
+
+  .catalog_title {
+    font-size: 45px;
   }
 
   .catalog_text {
-    font-size: 30px;
-    margin-bottom: 120px;
+    font-size: 35px;
   }
 
   .catalog_button {
     font-size: 30px;
-    padding: 20px 50px;
-    border-radius: 16px;
   }
 
   .catalog_image {
-    width: 20vw;
-    border-radius: 180px 180px 0 0;
+    max-width: 500px;
   }
 }

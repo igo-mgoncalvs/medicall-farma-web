@@ -76,30 +76,29 @@ export default function Home() {
     <div>
       {data.main.enable && (
         <div className={styles.about_us}>
-          <div className={styles.infos_container}>
-            <div className={styles.text_container}>
-              <p className={styles.title}>
-                {data.main.title}
-              </p>
-              <p className={styles.text}>
-                {data.main.text}
-              </p>
+          <div
+            className={styles.static_background}
+            style={{
+              backgroundImage: `url(${data.main.image})`
+            }}
+          >
+            <div className={styles.infos_container}>
+              <div className={styles.text_container}>
+                <p className={styles.title}>
+                  {data.main.title}
+                </p>
+                <p className={styles.text}>
+                  {data.main.text}
+                </p>
+              </div>
+              <Link
+                className={styles.button}
+                href={data.main.button_link}
+              >
+                {data.main.button_text}
+              </Link>
             </div>
-            <Link
-              className={styles.button}
-              href={data.main.button_link}
-            >
-              {data.main.button_text}
-            </Link>
           </div>
-
-          <img
-            src={data.main.image}
-            width={310}
-            height={205}
-            alt="banner-com-imagem-da-empresa"
-            className={styles.banner}
-          />
         </div>
       )}
 
@@ -113,9 +112,11 @@ export default function Home() {
               </p>
             </h1>
             <div className={styles.welcome_line_after} />
-            <p className={styles.welcome_text}>
-              {data.welcome.text}
-            </p>
+            {data.welcome.text.split('\n').map((item) =>(
+              <p key={item} className={styles.welcome_text}>
+                {item || <br />}
+              </p>
+            ))}
             <div className={styles.welcome_line_before} />
             <a
               className={styles.welcome_button}
@@ -158,21 +159,21 @@ export default function Home() {
                 ))}
               </div>
 
-              <Image
-                src={data.products.image}
-                width={100}
-                height={100}
-                alt=""
-                className={styles.products_image}
-              />
-
+              <a
+                className={styles.products_button}
+                href={data.products.button_link}
+              >
+                {data.products.button_text}
+              </a>
             </div>
-            <a
-              className={styles.products_button}
-              href={data.products.button_link}
-            >
-              {data.products.button_text}
-            </a>
+
+            <Image
+              src={data.products.image}
+              width={100}
+              height={100}
+              alt=""
+              className={styles.products_image}
+            />
           </div>
         </div>
       )}

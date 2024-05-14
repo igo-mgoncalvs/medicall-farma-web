@@ -8,6 +8,14 @@
   z-index: 2000;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1250px;
+
+}
+
 .menu_drawer {
   display: flex;
   flex-direction: column;
@@ -92,10 +100,12 @@
 @media (min-width: 1024px) {
   .main {
     padding: 16px 30px;
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .pages_container {
-    gap: 35px
+    gap: 8px
   }
 
   .link {
@@ -103,8 +113,8 @@
   }
 
   .logo {
-    width: 200px;
-    height: 55px;
+    width: 18vw;
+    height: 5vw;
   }
 }
 
@@ -114,15 +124,21 @@
   }
 
   .pages_container {
-    gap: 80px
+    justify-content: space-between;
+    gap: 20px
   }
 
   .link {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .button {
     font-size: 20px;
+  }
+
+  .logo {
+    max-width: 255px;
+    max-height: 70px;
   }
 }
 
@@ -131,9 +147,18 @@
     padding: 25px;
   }
 
+  .container {
+    width: 2000px;
+  }
+
+  .pages_container {
+    justify-content: space-between;
+    gap: 28px
+  }
+
   .logo {
-    width: 380px;
-    height: 100px;
+    max-width: 324px;
+    max-height: 80px;
   }
 
   .link {

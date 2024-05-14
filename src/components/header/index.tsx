@@ -64,9 +64,18 @@ function Header ({ contact } : { contact: string }) {
       activeRoute: 'politica-de-privacidade',
       title: 'Política da qualidade'
     },
+    {
+      id: 6,
+      page: '/fornecedores/#clientes',
+      activeRoute: 'clientes',
+      title: 'Clientes'
+    },
   ]
   return (
     <div className={styles.main}>
+      <div
+        className={styles.container}
+      >
         <Image 
           alt="logo-medicall-farma"
           src={logoColor}
@@ -75,62 +84,63 @@ function Header ({ contact } : { contact: string }) {
           className={logoColor ? styles.logo : styles.logoDisable}
         />
 
-      <div
-        className={styles.pages_container}
-      >
-        {routes.map((item) => (
-          <Link
-            href={item.page}
-            key={item.id}
-            className={`${styles.link} ${route.includes(item.activeRoute) && styles.active}`}
-          >
-            {item.title}
-          </Link>
-        ))}
-      </div>
-      <div
-        onClick={() => setOpen(!open)}
-        className={styles.right_menu}
-      >
-        <Image
-          alt=''
-          src={menu}
-        />
-      </div>
-
-      <Drawer
-        open={open}
-        anchor='right'
-        onClose={() => setOpen(false)}
-        sx={{
-          '.MuiDrawer-paper': {
-            backgroundColor: '#0081FF'
-          }
-        }}
-      >
         <div
-          className={styles.menu_drawer}
+          className={styles.pages_container}
         >
-          {routes.map(item => (
-            <a
+          {routes.map((item) => (
+            <Link
               href={item.page}
               key={item.id}
-              className={styles.menu_item}
-              onClick={() => setOpen(false)}
+              className={`${styles.link} ${route.includes(item.activeRoute) && styles.active}`}
             >
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
-      </Drawer>
+        <div
+          onClick={() => setOpen(!open)}
+          className={styles.right_menu}
+        >
+          <Image
+            alt=''
+            src={menu}
+          />
+        </div>
 
-      <a
-        className={styles.button}
-        href={contact}
-        target='_blank'
-      >
-        Contato
-      </a>
+        <Drawer
+          open={open}
+          anchor='right'
+          onClose={() => setOpen(false)}
+          sx={{
+            '.MuiDrawer-paper': {
+              backgroundColor: '#0081FF'
+            }
+          }}
+        >
+          <div
+            className={styles.menu_drawer}
+          >
+            {routes.map(item => (
+              <a
+                href={item.page}
+                key={item.id}
+                className={styles.menu_item}
+                onClick={() => setOpen(false)}
+              >
+                {item.title}
+              </a>
+            ))}
+          </div>
+        </Drawer>
+
+        <a
+          className={styles.button}
+          href={contact}
+          target='_blank'
+        >
+          Contato
+        </a>
+      </div>
     </div>
   )
 }
