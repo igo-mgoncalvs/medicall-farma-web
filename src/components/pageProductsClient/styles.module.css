@@ -163,6 +163,10 @@
     height: 20px;
   }
 
+  .product_item {
+    max-width: 300px;
+  }
+
   .product_image {
     width: 85px;
     height: 90px;
@@ -218,6 +222,7 @@
   .product_item {
     padding: 28px;
     border-radius: 12px;
+    max-width: 560px;
   }
 
   .product_image {
