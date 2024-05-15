@@ -49,8 +49,15 @@
   border-radius: 8px;
 }
 
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .product_image {
-  width: 80px;
+  width: auto;
   height: 85px;
   margin-bottom: 8px;
 }
@@ -168,7 +175,7 @@
   }
 
   .product_image {
-    width: 85px;
+    width: auto;
     height: 90px;
   }
 
@@ -226,7 +233,7 @@
   }
 
   .product_image {
-    width: 200px;
+    width: auto;
     height: 200px;
   }
 

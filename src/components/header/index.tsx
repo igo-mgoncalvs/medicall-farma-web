@@ -63,13 +63,7 @@ function Header ({ contact } : { contact: string }) {
       page: '/fornecedores/#politica-de-privacidade',
       activeRoute: 'politica-de-privacidade',
       title: 'Política da qualidade'
-    },
-    {
-      id: 6,
-      page: '/fornecedores/#clientes',
-      activeRoute: 'clientes',
-      title: 'Clientes'
-    },
+    }
   ]
   return (
     <div className={styles.main}>

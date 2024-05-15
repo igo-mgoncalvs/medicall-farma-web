@@ -708,8 +708,8 @@
   }
 
   .infos_container {
-    width: 1500px;
-    max-width: 1500px;
+    width: 1800px;
+    max-width: 1800px;
   }
 
   .title {
@@ -722,7 +722,7 @@
   }
 
   .welcome_container {
-    max-width: 1500px;
+    max-width: 1800px;
     margin: 80px auto;
   }
 
@@ -756,7 +756,7 @@
   }
 
   .products_list_container {
-    max-width: 1500px;
+    max-width: 1800px;
   }
 
   .products_itens_container {
@@ -778,7 +778,7 @@
   }
 
   .catalog_container {
-    max-width: 1500px;
+    max-width: 1800px;
     margin: 80px auto;
   }
 

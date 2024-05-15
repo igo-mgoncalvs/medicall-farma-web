@@ -130,11 +130,13 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
                 key={product.id}
                 className={styles.product_item}
               >
-                <img 
-                  src={product.image}
-                  alt={`imagem do ${product.name}`}
-                  className={styles.product_image}
-                />
+                <div className={styles.image_container}>
+                  <img 
+                    src={product.image}
+                    alt={`imagem do ${product.name}`}
+                    className={styles.product_image}
+                  />
+                </div>
                 <p className={styles.product_name}>{product.name}</p>
                 <p className={styles.product_description}>{product.summary}</p>
                 <div

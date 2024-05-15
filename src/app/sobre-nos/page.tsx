@@ -11,13 +11,15 @@ import BASE_URL from '@/hooks/axios';
 
 import styles from './styles.module.css'
 
+interface IBanners {
+  id: string
+  image: string
+  description: string
+  aboutUsId: string
+}
+
 interface IAboutUs {
-  banners: {
-      id: string
-      image: string
-      description: string
-      aboutUsId: string
-    }[], 
+
   directors: {
     id: string
     title: string
@@ -60,11 +62,16 @@ interface IAboutUs {
 
 function SobreNos () {
   const [interfaceData, setInterfaceData] = useState<IAboutUs>()
+  const [banners, setBanners] = useState<IBanners[]>([])
 
   async function getData() {
-    return await BASE_URL.get<IAboutUs>('about-us-interface')
-      .then(({data}) => {
-        setInterfaceData(data)
+    Promise.all([
+      BASE_URL.get<IAboutUs>('about-us-interface'),
+      BASE_URL.get<IBanners[]>('about-us-banners')
+    ])
+      .then(([data, bannersInterface]) => {
+        setInterfaceData(data.data)
+        setBanners(bannersInterface.data)
       })
   }
 
@@ -74,8 +81,8 @@ function SobreNos () {
 
   return interfaceData && (
     <div className={styles.container}>
-      {interfaceData.banners.length > 0 && (
-        <MainBanners data={interfaceData.banners} />
+      {banners.length > 0 && (
+        <MainBanners data={banners} />
       )}
 
       {interfaceData.history.enable && (

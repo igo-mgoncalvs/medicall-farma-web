@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: space-between;
   width: 1250px;
-
 }
 
 .menu_drawer {
@@ -58,7 +57,7 @@
 
   .pages_container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
   }
   
   .link {
@@ -102,10 +101,15 @@
     padding: 16px 30px;
     padding-left: 8vw;
     padding-right: 8vw;
+    justify-content: space-around;
+  }
+  
+  .container {
+    width: 950px;
   }
 
   .pages_container {
-    gap: 8px
+    gap: 30px
   }
 
   .link {
@@ -119,13 +123,13 @@
 }
 
 @media (min-width: 1440px) {
-  .main {
-    justify-content: space-around;
+  .container {
+    width: 1440px;
   }
-
+  
   .pages_container {
     justify-content: space-between;
-    gap: 20px
+    gap: 40px
   }
 
   .link {
@@ -148,12 +152,12 @@
   }
 
   .container {
-    width: 2000px;
+    width: 1800px;
   }
 
   .pages_container {
     justify-content: space-between;
-    gap: 28px
+    gap: 60px
   }
 
   .logo {
@@ -162,7 +166,7 @@
   }
 
   .link {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .active {
