@@ -137,13 +137,15 @@ function SuppliersScreen () {
         className={styles.privacy_policy_container}
         id='politica-de-privacidade'
       >
-        <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
+        <div className={styles.policy_center}>
+          <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
 
-        {privacyPolicy.text.split('\n').map((item) =>(
-          <p key={item} className={styles.policy_text}>
-            {item || <br />}
-          </p>
-        ))}
+          {privacyPolicy.text.split('\n').map((item) =>(
+            <p key={item} className={styles.policy_text}>
+              {item || <br />}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   )

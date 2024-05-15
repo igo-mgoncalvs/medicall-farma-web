@@ -181,7 +181,10 @@
 
 @media (min-width: 1440px) {
   .suppliers_infos_container {
-    gap: 115px
+    gap: 115px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .suppliers_title {
@@ -198,8 +201,8 @@
   }
 
   .suppliers_image {
-    width: 45vw;
-    height: 25vw;
+    max-width: 700px;
+    max-height: 400px;
   }
 
   .suppliers_logo {
@@ -207,21 +210,27 @@
     height: 10vw;
   }
 
+  .policy_center {
+    max-width: 1440px;
+    margin: auto;
+  }
+
   .privacy_policy_container {
-    font-size: 20px;
+    font-size: 25px;
     padding: 40px 70px;
   }
 
   .privacy_policy_title {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
 @media (min-width: 2560px) {
   .suppliers_infos_container {
-    margin: 4% 8%;
     margin-top: 200px;
-    gap: 150px
+    gap: 150px;
+    max-width: 1800px;
+    margin-bottom: 80px;
   }
   
   .suppliers_title {
