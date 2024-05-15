@@ -29,14 +29,20 @@
 
 @media (min-width: 1440px) {
   .banner {
-    padding-left: 90px;
-    padding-right: 90px;
-    min-height: 570px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1360px;
   }
 }
 
 @media (min-width: 2560px) {
   .banner {
-    padding: 2% 8%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1800px;
   }
 }

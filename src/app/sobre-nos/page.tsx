@@ -95,25 +95,27 @@ function SobreNos () {
 
       {interfaceData.team.enable && (
         <div className={styles.team_container}>
-          <div>
-            <p className={styles.team_title}>
-              {interfaceData.team.title}
-            </p>
-            <div className={styles.team_line}/>
-            <div className={styles.team_text}>
-              {interfaceData.team.text.split('\n').map((item) =>(
-                <p key={item}>
-                  {item || <br />}
-                </p>
-              ))}
+          <div className={styles.team_center}>
+            <div>
+              <p className={styles.team_title}>
+                {interfaceData.team.title}
+              </p>
+              <div className={styles.team_line}/>
+              <div className={styles.team_text}>
+                {interfaceData.team.text.split('\n').map((item) =>(
+                  <p key={item}>
+                    {item || <br />}
+                  </p>
+                ))}
+              </div>
             </div>
+          
+            <img
+              src={interfaceData.team.image}
+              alt='foto da equipe'
+              className={styles.team_image}
+            />
           </div>
-        
-          <img
-            src={interfaceData.team.image}
-            alt='foto da equipe'
-            className={styles.team_image}
-          />
         </div>
       )}
 
@@ -140,26 +142,28 @@ function SobreNos () {
 
       {interfaceData.values.length > 0 && (
         <div className={styles.values_container}>
-          <div className={styles.values_line}/>
-          <div className={`${styles.values_line} ${styles.values_line_big}`}/>
+          <div className={styles.values_center}>
+            <div className={styles.values_line}/>
+            <div className={`${styles.values_line} ${styles.values_line_big}`}/>
 
-          <div className={styles.values_list}>
-            {interfaceData.values.map((item) => (
-              <div
-                key={item.id}
-                className={styles.values_item}
-              >
-                <Image
-                  src={item.image}
-                  width={40}
-                  height={40}
-                  alt='icone dos valores'
-                  className={styles.values_icone}
-                />
-                <p className={styles.values_title}>{item.title}</p>
-                <p className={styles.values_text}>{item.text}</p>
-              </div>
-            ))}
+            <div className={styles.values_list}>
+              {interfaceData.values.map((item) => (
+                <div
+                  key={item.id}
+                  className={styles.values_item}
+                >
+                  <Image
+                    src={item.image}
+                    width={40}
+                    height={40}
+                    alt='icone dos valores'
+                    className={styles.values_icone}
+                  />
+                  <p className={styles.values_title}>{item.title}</p>
+                  <p className={styles.values_text}>{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}

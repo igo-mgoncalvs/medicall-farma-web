@@ -21,14 +21,16 @@
 
 @media (min-width: 1024px) {
   .our_space_image {
-    width: 36vw;
+    width: 100%;
     height: 24vw;
+    max-height: 386px;
   }
 }
 
 @media (min-width: 2560px) {
   .our_space_image {
-    width: 40vw;
+    width: 100%;
     height: 26vw;
+    max-height: 560px;
   }
 }
