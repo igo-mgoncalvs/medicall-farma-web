@@ -103,7 +103,7 @@ function SobreNos () {
       {interfaceData.team.enable && (
         <div className={styles.team_container}>
           <div className={styles.team_center}>
-            <div>
+            <div className={styles.team_infos}>
               <p className={styles.team_title}>
                 {interfaceData.team.title}
               </p>

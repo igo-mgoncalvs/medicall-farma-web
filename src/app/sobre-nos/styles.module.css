@@ -31,6 +31,11 @@
   margin-bottom: 36px;
 }
 
+.team_center {
+  display: flex;
+  flex-direction: column;
+}
+
 .team_title {
   font-size: 21px;
   font-family: var(--font-montserrat);
@@ -203,7 +208,17 @@
     display: flex;
     padding: 30px;
     margin-bottom: 0;
+  }
+  
+  .team_center {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     gap: 40px
+  }
+
+  .team_infos {
+    max-width: 500px;
   }
 
   .team_title {
@@ -217,6 +232,7 @@
   .team_image {
     width: 45vw;
     position: static;
+    margin: 0;
   }
 
   .our_space_container {
@@ -319,6 +335,11 @@
     gap: 60px;
   }
 
+  .team_infos {
+    max-width: 800px;
+  }
+
+
   .team_title {
     font-size: 28px;
     padding-bottom: 5px;
@@ -372,7 +393,7 @@
   .history_container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1360px;
+    max-width: 1250px;
   }
 
   .history_title {
@@ -394,7 +415,7 @@
   .team_center {
     display: flex;
     gap: 100px;
-    max-width: 1360px;
+    max-width: 1250px;
   }
 
   .team_title {
@@ -416,13 +437,13 @@
   }
 
   .our_space_container {
-    padding: 70px 40px;
-    max-width: 1440px;
+    padding: 70px 0;
+    max-width: 1250px;
     margin: 0 auto;
   }
 
   .our_space_text_container {
-    max-width: 710px;
+    max-width: 580px;
   }
 
   .our_space_title {
@@ -442,7 +463,7 @@
   }
 
   .values_center {
-    max-width: 1360px;
+    width: 1250px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -471,7 +492,7 @@
   
   .directors_item {
     gap: 80px;
-    max-width: 1360px;
+    max-width: 1250px;
   }
 
   .directors_infos {

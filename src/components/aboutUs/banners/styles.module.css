@@ -31,7 +31,7 @@
   .banner {
     margin: 0 50px;
     padding-bottom: 0;
-    max-height: 470px;
+    max-height: 570px;
 }
 }
 
@@ -41,7 +41,7 @@
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    max-width: 1360px;
+    max-width: 1250px;
     max-height: 615px;
   }
 }

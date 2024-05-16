@@ -5,6 +5,7 @@ import { Autoplay } from 'swiper/modules';
 
 import styles from './styles.module.css'
 import 'swiper/css';
+import Image from 'next/image';
 
 interface IBanners {
   id: string,
@@ -30,10 +31,11 @@ export default function SpaceBanners ({ data }: { data: IBanners[]}) {
         <SwiperSlide
           key={item.id}
         >
-          <div
-            style={{
-              backgroundImage: `url(${item.image})`
-            }}
+          <Image
+            src={item.image}
+            alt='tetse'
+            width={100}
+            height={100}
             className={styles.our_space_image}
           />
         </SwiperSlide>

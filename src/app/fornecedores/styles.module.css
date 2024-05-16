@@ -184,7 +184,7 @@
 @media (min-width: 1440px) {
   .suppliers_infos_container {
     gap: 115px;
-    max-width: 1440px;
+    max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
   }
