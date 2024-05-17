@@ -10,6 +10,7 @@ import whatsapp from '@/assets/icons/whatsapp.svg'
 
 import styles from './styles.module.css'
 import 'swiper/css';
+import { FreeMode, Mousewheel } from 'swiper/modules';
 
 interface IProduct {
   id: string
@@ -82,43 +83,34 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
           </p>
 
           <Swiper
-            slidesPerView={1.7}
+            slidesPerView={'auto'}
             spaceBetween={12}
             className={styles.products_list}
+            freeMode={true}
+            slidesOffsetBefore={12}
+            slidesOffsetAfter={12}
+            modules={[FreeMode]}
             breakpoints={{
-              320: {
-                slidesOffsetBefore: 12,
-                slidesPerView: 1.5,
-              },
-              375: {
-                slidesOffsetBefore: 12,
-                slidesPerView: 1.7,
-              },
               425: {
                 slidesOffsetBefore: 12,
-                slidesPerView: 2,
                 spaceBetween: 22,
               },
               768: {
-                slidesPerView: 3,
                 spaceBetween: 20,
                 slidesOffsetBefore: 20,
                 slidesOffsetAfter: 20
               },
               1024: {
-                slidesPerView: 4,
                 spaceBetween: 20,
                 slidesOffsetBefore: 40,
                 slidesOffsetAfter: 40
               },
               1440: {
-                slidesPerView: 4.8,
                 spaceBetween: 20,
                 slidesOffsetBefore: 40,
-                slidesOffsetAfter: 40
+                slidesOffsetAfter: 10,
               },
               2560: {
-                slidesPerView: 4.6,
                 spaceBetween: 30,
                 slidesOffsetBefore: 80,
                 slidesOffsetAfter: 80
@@ -151,13 +143,13 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
                       alt='icone whatsapp'
                       className={styles.product_item_icone}
                     />
-                      <a
-                        className={styles.product_button_text}
-                        href={product.link}
-                        target='_blank'
-                      >
-                        Adquirir
-                      </a>
+                    <a
+                      className={styles.product_button_text}
+                      href={product.link}
+                      target='_blank'
+                    >
+                      Adquirir
+                    </a>
                   </div>
                   <div
                     className={`${styles.product_button} ${styles.product_button_blue}`}
@@ -166,7 +158,7 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
                         className={styles.product_button_text}
                         href={`produtos/${product.route}`}
                       >
-                        Sabiba mais
+                        Saiba mais
                       </a>
                   </div>
                 </div>
