@@ -13,6 +13,7 @@ interface IProduct {
   description: string
   route: string
   summary: string
+  active: boolean
 }
 
 interface IGroups {

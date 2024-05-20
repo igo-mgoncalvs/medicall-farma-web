@@ -20,6 +20,7 @@ interface IProduct {
   description: string
   route: string
   summary: string
+  active: boolean
 }
 
 interface IGroups {
@@ -37,8 +38,6 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
     return regex.test(name);
   }, [search])
 
-  console.log(data)
-  
   useEffect(() => {
     const searchList: IGroups[] = []
     
@@ -73,7 +72,8 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
         />
       </div>
 
-      {procutsData?.map((item) => (
+      {procutsData?.map((item) => 
+        item.products_list.filter(pro => pro.active).length > 0 && (
         <div
           key={item?.id}
           className={styles.product_group}
@@ -117,7 +117,7 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
               }
             }}
           >
-            {item?.products_list?.map((product) => (
+            {item?.products_list?.map((product) => product.active && (
               <SwiperSlide
                 key={product.id}
                 className={styles.product_item}
