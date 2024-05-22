@@ -156,7 +156,7 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
                   >
                       <a
                         className={styles.product_button_text}
-                        href={`produtos/${product.route}`}
+                        href={`produtos/${product.route.replace('/', '%2F')}`}
                       >
                         Saiba mais
                       </a>

@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import "./globals.css";
 import BASE_URL from "@/hooks/axios";
 import Footer from "@/components/footer";
+import FloatWhatsapp from "@/components/floatWhatsapp";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat', display: 'swap', });
@@ -37,7 +38,8 @@ export default async function RootLayout({
         <div className="children">
           {children}
         </div>
-
+        
+        <FloatWhatsapp contact={contact_link.link}/> 
         <Footer />
       </body>
     </html>

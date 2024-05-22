@@ -78,7 +78,7 @@
   height: 1.5px;
   background-image: linear-gradient(to right, #1C7DDC, #6BB4FB );
   margin-top: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   margin-top: 8px;
 }
 
@@ -101,11 +101,11 @@
 }
 
 .welcome_button {
+  font-size: 14px;
   background-image: linear-gradient(to top, #009255, #15B370);
-  padding: 6px 8px;
+  padding: 8px 24px;
   color: white;
   border-radius: 6px;
-  font-size: 11px;
   text-decoration: none;
 }
 
@@ -144,6 +144,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  gap: 20px;
 }
 
 .products_itens_container {
@@ -156,7 +157,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 4px
+  gap: 6px
 }
 
 .products_list_item {
@@ -185,7 +186,7 @@
 }
 
 .products_button {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   background-color: #fff;
   border: none;
@@ -222,8 +223,9 @@
   text-decoration: none;
   background-color: #0180FF;
   color: #fff;
-  padding: 6px 18px;
+  padding: 8px 24px;
   border-radius: 6px;
+  font-size: 14px;
   font-weight: 500;
 }
 

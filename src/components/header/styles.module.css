@@ -53,11 +53,16 @@
     position: fixed;
     background-color: #fff;
     width: 100vw;
+    justify-content: center;
   }
 
   .pages_container {
     display: flex;
     gap: 25px;
+  }
+
+  .container {
+    width: 800px;
   }
   
   .link {
