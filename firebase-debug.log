@@ -1,0 +1,23 @@
+[debug] [2024-05-22T13:42:18.225Z] ----------------------------------------------------------------------
+[debug] [2024-05-22T13:42:18.228Z] Command:       C:\Users\igor.moreira\.nvm\versions\node\v20.11.0\bin\node.exe C:\Users\igor.moreira\.nvm\versions\node\v20.11.0\bin\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-22T13:42:18.228Z] CLI Version:   13.1.0
+[debug] [2024-05-22T13:42:18.228Z] Platform:      win32
+[debug] [2024-05-22T13:42:18.229Z] Node Version:  v20.11.0
+[debug] [2024-05-22T13:42:18.229Z] Time:          Wed May 22 2024 10:42:18 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-05-22T13:42:18.229Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-22T13:42:18.315Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-22T13:42:18.316Z] > authorizing via signed-in user (igor2013mgoncalves@gmail.com)
+[debug] [2024-05-22T13:42:18.316Z] [iam] checking project medicall-farma for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-22T13:42:18.317Z] > refreshing access token with scopes: []
+[debug] [2024-05-22T13:42:18.318Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-22T13:42:18.318Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-22T13:42:18.632Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-22T13:42:18.632Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-22T13:42:18.642Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medicall-farma:testIamPermissions [none]
+[debug] [2024-05-22T13:42:18.642Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/medicall-farma:testIamPermissions x-goog-quota-user=projects/medicall-farma
+[debug] [2024-05-22T13:42:18.643Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medicall-farma:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-22T13:42:19.647Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medicall-farma:testIamPermissions 200
+[debug] [2024-05-22T13:42:19.647Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medicall-farma:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-22T13:42:19.647Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medicall-farma [none]
+[debug] [2024-05-22T13:42:20.122Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medicall-farma 200
