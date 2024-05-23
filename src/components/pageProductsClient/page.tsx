@@ -26,6 +26,7 @@ interface IProduct {
 interface IGroups {
   id: number,
   group_name: string,
+  active: boolean
   products_list: IProduct[]
 }
 
@@ -48,7 +49,8 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
         searchList.push({
           id: groups.id,
           group_name: groups.group_name,
-          products_list: searchProduct
+          products_list: searchProduct,
+          active: groups.active
         })
       }
     })
@@ -73,7 +75,7 @@ function PageProductsClient ({ data }: { data: IGroups[] }) {
       </div>
 
       {procutsData?.map((item) => 
-        item.products_list.filter(pro => pro.active).length > 0 && (
+        (item.products_list.filter(pro => pro.active).length > 0 && item.active) && (
         <div
           key={item?.id}
           className={styles.product_group}

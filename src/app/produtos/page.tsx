@@ -19,7 +19,8 @@ interface IProduct {
 interface IGroups {
   id: number,
   group_name: string,
-  products_list: IProduct[]
+  products_list: IProduct[],
+  active: boolean
 }
 
 
