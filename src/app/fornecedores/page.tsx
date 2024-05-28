@@ -117,19 +117,22 @@ function SuppliersScreen () {
             </p>
           </div>
 
-          <div
-            className={`${styles.suppliers_list} ${styles.suppliers_list_background}`}
-          >
-            {clients.map((item) => (
-              <div
-                key={item.id}
-                className={styles.suppliers_logo}
-                style={{
-                  backgroundImage: `url(${item.image})`
-                }}
-              />
-            ))}
+          <div className={styles.suppliers_list_background}>
+            <div
+              className={styles.suppliers_list}
+            >
+              {clients.map((item) => (
+                <div
+                  key={item.id}
+                  className={styles.suppliers_logo}
+                  style={{
+                    backgroundImage: `url(${item.image})`
+                  }}
+                />
+              ))}
+            </div>
           </div>
+
         </div>
       )}
 

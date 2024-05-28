@@ -137,8 +137,8 @@ export default function Home() {
 
       {data.products?.enable && (
         <div className={styles.products_container}>
-          <div>
-            <p className={styles.products_title}>
+          <div className={styles.products_title}>
+            <p>
               {data.products?.title}
             </p>
 
