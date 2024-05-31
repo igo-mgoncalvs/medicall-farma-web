@@ -137,15 +137,17 @@ export default function Home() {
 
       {data.products?.enable && (
         <div className={styles.products_container}>
-          <div className={styles.products_title}>
-            <p>
-              {data.products?.title}
-            </p>
 
-            <span className={styles.products_line} />
-          </div>
+        <div className={styles.products_list_container}>
+          <div>
+            <div className={styles.products_title}>
+              <p>
+                {data.products?.title}
+              </p>
 
-          <div className={styles.products_list_container}>
+              <span className={styles.products_line} />
+            </div>
+            
             <div className={styles.products_itens_container}>
               <div className={styles.products_list}>
                 {productsList?.map((item) => (
@@ -166,6 +168,7 @@ export default function Home() {
                 {data.products.button_text}
               </a>
             </div>
+          </div>
 
             <Image
               src={data.products.image}

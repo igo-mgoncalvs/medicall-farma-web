@@ -50,7 +50,8 @@ function SuppliersScreen () {
   useEffect(() => {
     getData()
   }, [])
-
+  
+  console.log(privacyPolicy)
   return (suppliers && clients && interfaceData && privacyPolicy) && (
     <div>
       <div
@@ -142,7 +143,6 @@ function SuppliersScreen () {
       >
         <div className={styles.policy_center}>
           <p className={styles.privacy_policy_title}>{privacyPolicy.title}</p>
-
           {privacyPolicy.text.split('\n').map((item) =>(
             <p key={item} className={styles.policy_text}>
               {item || <br />}

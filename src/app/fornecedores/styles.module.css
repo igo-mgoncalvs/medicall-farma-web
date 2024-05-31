@@ -69,9 +69,11 @@
 
 .privacy_policy_title {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 2vw;
 }
+
+
 
 .policy_text {
   color: #fff;
@@ -184,7 +186,7 @@
 @media (min-width: 1440px) {
   .suppliers_infos_container {
     gap: 115px;
-    max-width: 1250px;
+    max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 160px;
