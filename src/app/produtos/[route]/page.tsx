@@ -13,6 +13,7 @@ interface IProduct {
   name: string
   link: string
   description: string
+  subTitle: string
 }
 
 async function getData({ route } : { route: string }) {
@@ -48,7 +49,7 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
           <div>
             <div className={styles.text_container}>
               <p className={styles.title}>
-                {data.name}
+                {`${data.name}${data.subTitle && ` - ${data.subTitle}`}`}
               </p>
               {data.description.split('\n').map((item) =>(
                 <p className={styles.text} key={item}>
