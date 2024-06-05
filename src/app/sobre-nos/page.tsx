@@ -150,9 +150,6 @@ function SobreNos () {
       {interfaceData.values.length > 0 && (
         <div className={styles.values_container}>
           <div className={styles.values_center}>
-            <div className={styles.values_line}/>
-            <div className={`${styles.values_line} ${styles.values_line_big}`}/>
-
             <div className={styles.values_list}>
               {interfaceData.values.map((item) => (
                 <div
