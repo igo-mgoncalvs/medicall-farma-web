@@ -35,7 +35,7 @@ function MenuMobile() {
     <div
       className={styles.menu_container}
     >
-      {routes.map((item) => (
+      {routes.map((item) => item.title !== 'Produtos' && (
         <Link
           href={item.page}
           key={item.id}

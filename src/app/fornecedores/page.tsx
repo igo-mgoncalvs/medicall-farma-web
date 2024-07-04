@@ -51,7 +51,6 @@ function SuppliersScreen () {
     getData()
   }, [])
   
-  console.log(privacyPolicy)
   return (suppliers && clients && interfaceData && privacyPolicy) && (
     <div>
       <div

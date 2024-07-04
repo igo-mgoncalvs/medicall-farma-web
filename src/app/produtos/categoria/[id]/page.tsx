@@ -1,45 +1,54 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import search_logo from '@/assets/icons/search.svg'
 import whatsapp from '@/assets/icons/whatsapp.svg'
+
+import DropdownMenuProducts from '@/components/dropdownMenuProducts';
 
 import styles from './styles.module.css'
 import 'swiper/css';
-import DropdownMenuProducts from '../dropdownMenuProducts';
-import SearchBar from '../searchBar'
+import BASE_URL from '@/hooks/axios'
+import { IProduct } from '@/utils/interfaces'
+import SearchBar from '@/components/searchBar'
 
-interface IProduct {
-  id: string
-  index: number,
-  image: string
-  imageId: string
-  route: string
-  name: string
-  favorit: boolean
-  subTitle: string
-  link: string
-  summary: string
-  whatsapp: string
-  description: string
-  active: boolean,
-  productsGroupsId: string
-  categoryId: string
+interface IProps {
+  params: {
+    id: string
+  }
 }
 
-function PageProductsClient ({ data }: { data: IProduct[] }) {
+function ProductFilterCategory({ params }: IProps) {
+  const [search, setSearch] = useState<string>('')
+  const [category, setCategory] = useState('')
+  const [product, setProduct] = useState<IProduct[]>([])
+
+  useEffect(() => {
+    const getProducts = async () => {
+      await BASE_URL.get<IProduct[]>(`/find-products-by-category/${params.id}`)   
+        .then((response) => {
+          const filterByCategory = response.data.filter((item: IProduct) => item.categoryId === params.id)
+              
+          setCategory(filterByCategory[0].category.name)
+          setProduct(filterByCategory)
+        })
+    }
+
+
+    getProducts()
+  }, [])
   
   return (
     <div className={styles.products_container}>
-
       <SearchBar />
 
       <DropdownMenuProducts />
 
       <Image
-        src={'https://i.postimg.cc/VvVP1nLQ/1-1.png'}
+        src={'https://i.postimg.cc/HnNDr9p2/Group-66.png'}
         width={100}
         height={100}
         alt='teste'
@@ -50,16 +59,18 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       <div
         className={styles.products_list}
       >
-        <p
-          className={styles.products_title}
-        >
-          Destaque
-        </p>
+        {product.length > 0 && (
+          <p
+            className={styles.products_title}
+          >
+            {category}
+          </p>
+        )}
           
         <div
           className={styles.products_list_content}
         >
-          {data.map((product) => (
+          {product.map((product) => (
             <div
               key={product.id}
               className={styles.product_item}
@@ -110,7 +121,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       </div>
 
       <Image
-        src={'https://i.postimg.cc/05XN9HQS/Group-65.png'}
+        src={'https://i.postimg.cc/G2F3ZNxy/Group-67.png'}
         width={100}
         height={100}
         alt='teste'
@@ -120,4 +131,4 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
   )
 }
 
-export default PageProductsClient
+export default ProductFilterCategory

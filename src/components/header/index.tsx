@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation';
-import { Drawer } from '@mui/material';
+import React, { useEffect, useState, useCallback } from 'react'
+import { usePathname, useRouter } from 'next/navigation';
+import { Collapse, Drawer, List, ListItemButton, ListItemText } from '@mui/material';
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import Link from 'next/link';
 
 import menu from '@/assets/icons/Frame.svg'
@@ -11,7 +12,8 @@ import menu from '@/assets/icons/Frame.svg'
 import styles from './styles.module.css'
 import Image from 'next/image';
 import BASE_URL from '@/hooks/axios';
-import { ILogos } from '@/utils/interfaces';
+import { IGroups, ILogos } from '@/utils/interfaces';
+import CollapseMenuMobile from '../collapseMenuMobile';
 
 
 function Header ({ contact } : { contact: string }) {
@@ -19,6 +21,7 @@ function Header ({ contact } : { contact: string }) {
   const [logoColor, setLogoColor] = useState<string>('')
 
   const pathname = usePathname()
+  const navigate = useRouter()
   const route = pathname.replace('/', '') || 'home'
 
   const getLogo = async () => {
@@ -27,11 +30,16 @@ function Header ({ contact } : { contact: string }) {
         setLogoColor(data.logoColor)
       })
   }
-
-
+  
   useEffect(() => {
     getLogo()
   }, [])
+
+  useEffect(() => {
+    if(open) {
+      setOpen(false)
+    }
+  }, [route])
 
   const routes = [
     {
@@ -76,6 +84,7 @@ function Header ({ contact } : { contact: string }) {
           width={100}
           height={100}
           className={logoColor ? styles.logo : styles.logoDisable}
+          onClick={() => navigate.push('/')}
         />
 
         <div
@@ -107,14 +116,14 @@ function Header ({ contact } : { contact: string }) {
           onClose={() => setOpen(false)}
           sx={{
             '.MuiDrawer-paper': {
-              backgroundColor: '#0081FF'
+              backgroundColor: '#0081FF',
             }
           }}
         >
           <div
             className={styles.menu_drawer}
           >
-            {routes.map(item => (
+            {routes.map(item =>  item.title !== 'Produtos' ? (
               <a
                 href={item.page}
                 key={item.id}
@@ -123,6 +132,8 @@ function Header ({ contact } : { contact: string }) {
               >
                 {item.title}
               </a>
+            ): (
+              <CollapseMenuMobile />
             ))}
           </div>
         </Drawer>

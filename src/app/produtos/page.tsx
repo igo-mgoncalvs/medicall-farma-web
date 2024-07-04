@@ -5,17 +5,7 @@ import React, { useState, useEffect } from 'react'
 import PageProductsClient from '@/components/pageProductsClient/page';
 import BASE_URL from '@/hooks/axios';
 
-interface IProduct {
-  id: string
-  image: string 
-  name: string
-  link: string
-  description: string
-  route: string
-  summary: string
-  active: boolean
-}
-
+import { IProduct } from '@/utils/interfaces';
 interface IGroups {
   id: number,
   group_name: string,
@@ -25,11 +15,11 @@ interface IGroups {
 
 
 function Products () {
-  const [data, setData] = useState<IGroups[]>()
+  const [data, setData] = useState<IProduct[]>()
 
   async function getData() {
-    return await BASE_URL.get<IGroups[]>('/products')
-    .then((response) => setData(response.data))
+    return await BASE_URL.get<IProduct[]>('/get-favorites')
+      .then((response) => setData(response.data))
   }
 
   useEffect(() => {

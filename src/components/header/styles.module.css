@@ -18,7 +18,7 @@
 .menu_drawer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
   margin-top: 100px;
   padding: 0 35px;
 }
@@ -26,6 +26,7 @@
 .menu_item {
   color: #fff;
   text-decoration: none;
+  padding: 4px 0;
 }
 
 .pages_container {
@@ -56,11 +57,6 @@
     justify-content: center;
   }
 
-  .pages_container {
-    display: flex;
-    gap: 25px;
-  }
-
   .container {
     width: 800px;
   }
@@ -79,7 +75,7 @@
   }
   
   .button {
-    display: block;
+    display: none;
     background-color: #0180FF;
     padding: 8px 21px;
     color: #fff;
@@ -93,11 +89,6 @@
   .button:hover {
     cursor: pointer;
     background-color: #006cd8;
-  }
-
-  .right_menu {
-    display: none;
-    cursor: pointer;
   }
 }
 
@@ -113,6 +104,7 @@
   }
 
   .pages_container {
+    display: flex;
     gap: 30px
   }
 
@@ -123,6 +115,14 @@
   .logo {
     width: 18vw;
     height: 5vw;
+  }
+
+  .button {
+    display: block;
+  }
+
+  .right_menu {
+    display: none;
   }
 }
 

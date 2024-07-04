@@ -3,7 +3,7 @@
   flex-direction: column;
   background: linear-gradient(90deg, #0E66CA 0%, #0081FF 100%);
   color: #fff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .products_search_bar {

@@ -1,0 +1,160 @@
+{
+  "data": [
+    {
+        "id": "c1978910-7787-4aa2-9924-0856ed8eb085",
+        "group_name": "Equipamentos Hospitalares",
+        "categories": [
+          {
+            "id": "pressao-negativa",
+            "name": "Pressão Negativa"
+          },
+          {
+            "id": "eletrodo",
+            "name": "Eletrodo"
+          },
+          {
+            "id": "placa-eletrocirurgica",
+            "name": "Placa eletrocirúrgica"
+          },
+          {
+            "id": "caneta-eletrocirurgica",
+            "name": "Caneta eletrocirúrgica"
+          },
+          {
+            "id": "campo-cirurgico",
+            "name": "Campo cirúrgico"
+          },
+          {
+            "id": "tricotomizador-cirurgico",
+            "name": "Tricotomizador Cirúrgico"
+          },
+          {
+            "id": "cola-cirurgica",
+            "name": "Cola cirúrgica"
+          },
+          {
+            "id": "pas-para-desfibrilador",
+            "name": "Pás para desfibrilador"
+          },
+          {
+            "id": "molicare",
+            "name": "Molicare"
+          },
+          {
+            "id": "bigfral",
+            "name": "Bigfral"
+          }
+        ],
+        "active": true,
+        "index": 0
+    },
+    {
+        "id": "48af6142-a389-4677-a1dc-a0eeb2c00374",
+        "group_name": "Curativos",
+        "categories": [
+          {
+            "id": "hydroclean",
+            "name": "HydroClean"
+          },
+          {
+            "id": "hydrotac",
+            "name": "HydroTac"
+          },
+          {
+            "id": "hydrosorb",
+            "name": "Hydrosorb"
+          },
+          {
+            "id": "proximel",
+            "name": "Proximel"
+          },
+          {
+            "id": "atrauman",
+            "name": "Atrauman"
+          },
+          {
+            "id": "hydrocoll",
+            "name": "Hydrocoll"
+          },
+          {
+            "id": "peha-haft",
+            "name": "Peha-Haft"
+          },
+          {
+            "id": "hydrofilm",
+            "name": "Hydrofilm"
+          }
+        ],
+        "active": true,
+        "index": 1
+    },
+    {
+        "id": "17336d0e-0d70-4f63-b08f-8b1fd7279014",
+        "group_name": "Saneantes",
+        "categories": [
+          {
+            "id": "atomic",
+            "name": "Atomic"
+          },
+          {
+            "id": "newphos",
+            "name": "Newphos"
+          },
+          {
+            "id": "nq-peroxy-plus",
+            "name": "Nq Peroxy Plus"
+          },
+          {
+            "id": "penta-enzimatico",
+            "name": "Penta enzimático"
+          },
+          {
+            "id": "ortoftalaldeído",
+            "name": "Ortoftalaldeído"
+          }
+        ],
+        "active": true,
+        "index": 2
+    },
+    {
+        "id": "35e9b87a-6cbc-40a2-a758-5da394d8d1f2",
+        "group_name": "Medicamentos",
+        "categories": [
+          {
+            "id": "antibiotico",
+            "name": "Antibiótico"
+          },
+          {
+            "id": "anestesicos",
+            "name": "Anestésicos"
+          },
+          {
+            "id": "solucoes-injetaveis",
+            "name": "Soluções Injetáveis"
+          },
+          {
+            "id": "antismaticos",
+            "name": "Antismáticos"
+          },
+          {
+            "id": "psicotropicos",
+            "name": "Psicotrópicos"
+          },
+          {
+            "id": "curativo",
+            "name": "Curativo"
+          },
+          {
+            "id": "sedativos",
+            "name": "Sedativos"
+          },
+          {
+            "id": "antialergicos",
+            "name": "Antialérgicos"
+          }
+        ],
+        "active": true,
+        "index": 4
+    }
+  ]
+}
