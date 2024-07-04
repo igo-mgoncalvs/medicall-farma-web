@@ -39,7 +39,7 @@ function Header ({ contact } : { contact: string }) {
     if(open) {
       setOpen(false)
     }
-  }, [route])
+  }, [route, open])
 
   const routes = [
     {
@@ -133,7 +133,9 @@ function Header ({ contact } : { contact: string }) {
                 {item.title}
               </a>
             ): (
-              <CollapseMenuMobile />
+              <CollapseMenuMobile
+                key={item.id}
+              />
             ))}
           </div>
         </Drawer>

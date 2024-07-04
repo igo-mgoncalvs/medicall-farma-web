@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo, useEffect } from 'react'
 import Image from 'next/image'
 
 import whatsapp from '@/assets/icons/whatsapp.svg'
@@ -10,26 +10,22 @@ import styles from './styles.module.css'
 import 'swiper/css';
 import DropdownMenuProducts from '../dropdownMenuProducts';
 import SearchBar from '../searchBar'
-
-interface IProduct {
-  id: string
-  index: number,
-  image: string
-  imageId: string
-  route: string
-  name: string
-  favorit: boolean
-  subTitle: string
-  link: string
-  summary: string
-  whatsapp: string
-  description: string
-  active: boolean,
-  productsGroupsId: string
-  categoryId: string
-}
+import { IProduct, IProductsBanners } from '@/utils/interfaces'
+import BASE_URL from '@/hooks/axios'
 
 function PageProductsClient ({ data }: { data: IProduct[] }) {
+  const [banners, setBannes] = useState<IProductsBanners>()
+
+  const getImages = () => {
+    BASE_URL.get<IProductsBanners>('/products-page-banners')
+      .then((response) => {
+        setBannes(response.data)
+      })
+  }
+
+  useEffect(() => {
+    getImages()
+  }, [])
   
   return (
     <div className={styles.products_container}>
@@ -39,7 +35,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       <DropdownMenuProducts />
 
       <Image
-        src={'https://i.postimg.cc/VvVP1nLQ/1-1.png'}
+        src={banners?.faviritFirst || ''}
         width={100}
         height={100}
         alt='teste'
@@ -110,7 +106,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       </div>
 
       <Image
-        src={'https://i.postimg.cc/05XN9HQS/Group-65.png'}
+        src={banners?.faviritSecound || ''}
         width={100}
         height={100}
         alt='teste'

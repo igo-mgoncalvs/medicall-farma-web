@@ -54,7 +54,7 @@ export default function SearchBar () {
       setSearchProducts([])
       setLoading(false)
     }
-  }, [products, search])
+  }, [products, searchRule])
 
   return (
     <div className={styles.container}>
@@ -97,6 +97,7 @@ export default function SearchBar () {
       >
         {searchProducts?.map((product, index) => index < 5 &&(
           <div
+            key={product.id}
             className={styles.product_item}
             onClick={() => navigate.push(`/produtos/${product.id}`)}
           >

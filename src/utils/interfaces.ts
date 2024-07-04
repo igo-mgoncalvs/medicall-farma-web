@@ -38,3 +38,10 @@ export interface IProduct {
   categoryId: string
   category: ICategory
 }
+
+export interface IProductsBanners {
+  faviritFirst: string
+  faviritSecound: string
+  detailsFirst: string
+  detailsSecound: string
+}

@@ -12,7 +12,7 @@ import DropdownMenuProducts from '@/components/dropdownMenuProducts';
 import styles from './styles.module.css'
 import 'swiper/css';
 import BASE_URL from '@/hooks/axios'
-import { IProduct } from '@/utils/interfaces'
+import { IProduct, IProductsBanners } from '@/utils/interfaces'
 import SearchBar from '@/components/searchBar'
 
 interface IProps {
@@ -23,6 +23,18 @@ interface IProps {
 
 function ProductFilterCategory({ searchParams }: IProps) {
   const [product, setProduct] = useState<IProduct[]>([])
+  const [banners, setBannes] = useState<IProductsBanners>()
+
+  const getImages = () => {
+    BASE_URL.get<IProductsBanners>('/products-page-banners')
+      .then((response) => {
+        setBannes(response.data)
+      })
+  }
+
+  useEffect(() => {
+    getImages()
+  }, [])
 
   useEffect(() => {
     const getProducts = async () => {
@@ -43,7 +55,7 @@ function ProductFilterCategory({ searchParams }: IProps) {
       <DropdownMenuProducts />
 
       <Image
-        src={'https://i.postimg.cc/HnNDr9p2/Group-66.png'}
+        src={banners?.detailsFirst || ''}
         width={100}
         height={100}
         alt='teste'
@@ -116,7 +128,7 @@ function ProductFilterCategory({ searchParams }: IProps) {
       </div>
 
       <Image
-        src={'https://i.postimg.cc/G2F3ZNxy/Group-67.png'}
+        src={banners?.detailsSecound || ''}
         width={100}
         height={100}
         alt='teste'
