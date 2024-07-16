@@ -1,21 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-import React, { useState, useCallback, useMemo, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import search_logo from '@/assets/icons/search.svg'
 import whatsapp from '@/assets/icons/whatsapp.svg'
+
+import DropdownMenuProducts from '@/components/dropdownMenuProducts';
 
 import styles from './styles.module.css'
 import 'swiper/css';
-import DropdownMenuProducts from '../dropdownMenuProducts';
-import SearchBar from '../searchBar'
-import { IProduct, IProductsBanners } from '@/utils/interfaces'
 import BASE_URL from '@/hooks/axios'
+import { IProduct, IProductsBanners } from '@/utils/interfaces'
+import SearchBar from '@/components/searchBar'
 
-function PageProductsClient ({ data }: { data: IProduct[] }) {
+interface IProps {
+  searchParams: {
+    search: string
+  }
+}
+
+function ProductFilterCategory({ searchParams }: IProps) {
+  const [product, setProduct] = useState<IProduct[]>([])
   const [banners, setBannes] = useState<IProductsBanners>()
-  const [width, setWidth] = useState<number>(0)
 
   const getImages = () => {
     BASE_URL.get<IProductsBanners>('/products-page-banners')
@@ -29,38 +37,38 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
   }, [])
 
   useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [window])
+    const getProducts = async () => {
+      await BASE_URL.get<IProduct[]>(`/search-products?search=${searchParams.search}`)   
+        .then(({data}) => {
+          setProduct(data)
+        })
+    }
+
+
+    getProducts()
+  }, [searchParams.search])
   
   return (
     <div className={styles.products_container}>
-
       <SearchBar />
 
       <DropdownMenuProducts />
 
-      <Image
-        src={width <= 500 ? (banners?.faviritFirstMobile || "") : (banners?.faviritFirst || '')}
-        width={100}
-        height={100}
-        alt=''
-        className={styles.infos_banner}
-      />
-
-
       <div
         className={styles.products_list}
       >
-        <p
-          className={styles.products_title}
-        >
-          Destaque
-        </p>
+        {product.length > 0 && (
+          <p
+            className={styles.products_title}
+          >
+            {`Resultado da busca: ${searchParams.search}`}
+          </p>
+        )}
           
         <div
           className={styles.products_list_content}
         >
-          {data.map((product) => (
+          {product.map((product) => (
             <div
               key={product.id}
               className={styles.product_item}
@@ -111,14 +119,14 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       </div>
 
       <Image
-        src={width <= 500 ? (banners?.faviritSecoundMobile || "") : (banners?.faviritSecound || '')}
+        src={banners?.detailsFirst || ''}
         width={100}
         height={100}
-        alt=''
+        alt='teste'
         className={styles.infos_banner}
       />
     </div>
   )
 }
 
-export default PageProductsClient
+export default ProductFilterCategory

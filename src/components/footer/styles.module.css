@@ -2,17 +2,42 @@
   display: flex;
   justify-content: center;
   background-color: #2392FF;
-  padding: 30px;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
 }
 
 .logo {
   width: 55vw;
   height: auto;
+  max-height: 50px;
+}
+
+.addressContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  border-top: 2px solid #fff;
+  width: 100%;
+  margin-top: 26px;
+  padding-bottom: 90px;
+}
+
+.address {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 20px;
+  text-decoration: none;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .logo {
     width: 30vw;
+  }
+
+  .addressContainer {
+    padding-bottom: 70px;
   }
 }
 
@@ -20,16 +45,35 @@
   .logo {
     width: 25vw;
   }
+
+  .addressContainer {
+    padding-bottom: 50px;
+  }
+
+  .address {
+    font-size: 20px;
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 1440px) {
   .logo {
     width: 20vw;
   }
+
+  .address {
+    font-size: 26px;
+    max-width: 650px;
+  }
 }
 
-@media (min-width: 2560px) {
-  .footer {
-    padding: 50px;
+@media (min-width: 2560px) {  
+  .logo {
+    max-height: 90px;
+  }
+
+  .address {
+    font-size: 32px;
+    max-width: 750px;
   }
 }
