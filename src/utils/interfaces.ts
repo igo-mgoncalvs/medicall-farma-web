@@ -42,6 +42,13 @@ export interface IProduct {
 export interface IProductsBanners {
   faviritFirst: string
   faviritSecound: string
+  faviritFirstMobile: string
+  faviritSecoundMobie: string
   detailsFirst: string
   detailsSecound: string
+}
+
+export interface IAddress {
+  address: string
+  link: string
 }

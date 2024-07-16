@@ -58,15 +58,6 @@ function ProductFilterCategory({ params }: IProps) {
 
       <DropdownMenuProducts />
 
-      <Image
-        src={banners?.detailsFirst || ""}
-        width={100}
-        height={100}
-        alt='teste'
-        className={styles.infos_banner}
-      />
-
-
       <div
         className={styles.products_list}
       >
@@ -120,7 +111,7 @@ function ProductFilterCategory({ params }: IProps) {
                 >
                     <a
                       className={styles.product_button_text}
-                      href={`produtos/${product.id}`}
+                      href={`/produtos/${product.id}`}
                     >
                       Saiba mais
                     </a>
@@ -132,7 +123,7 @@ function ProductFilterCategory({ params }: IProps) {
       </div>
 
       <Image
-        src={banners?.detailsSecound || ''}
+        src={banners?.detailsFirst || ''}
         width={100}
         height={100}
         alt='teste'

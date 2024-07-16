@@ -36,10 +36,8 @@ function Header ({ contact } : { contact: string }) {
   }, [])
 
   useEffect(() => {
-    if(open) {
-      setOpen(false)
-    }
-  }, [route, open])
+    setOpen(false)
+  }, [route])
 
   const routes = [
     {

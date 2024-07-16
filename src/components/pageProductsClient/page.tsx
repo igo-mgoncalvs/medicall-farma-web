@@ -15,6 +15,7 @@ import BASE_URL from '@/hooks/axios'
 
 function PageProductsClient ({ data }: { data: IProduct[] }) {
   const [banners, setBannes] = useState<IProductsBanners>()
+  const [width, setWidth] = useState<number>(0)
 
   const getImages = () => {
     BASE_URL.get<IProductsBanners>('/products-page-banners')
@@ -26,6 +27,10 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
   useEffect(() => {
     getImages()
   }, [])
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [window])
   
   return (
     <div className={styles.products_container}>
@@ -35,10 +40,10 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       <DropdownMenuProducts />
 
       <Image
-        src={banners?.faviritFirst || ''}
+        src={width <= 500 ? (banners?.faviritFirstMobile || "") : (banners?.faviritFirst || '')}
         width={100}
         height={100}
-        alt='teste'
+        alt=''
         className={styles.infos_banner}
       />
 
@@ -94,7 +99,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
                 >
                     <a
                       className={styles.product_button_text}
-                      href={`produtos/${product.id}`}
+                      href={`/produtos/${product.id}`}
                     >
                       Saiba mais
                     </a>
@@ -106,10 +111,10 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       </div>
 
       <Image
-        src={banners?.faviritSecound || ''}
+        src={width <= 500 ? (banners?.faviritSecoundMobie || "") : (banners?.faviritSecound || '')}
         width={100}
         height={100}
-        alt='teste'
+        alt=''
         className={styles.infos_banner}
       />
     </div>
