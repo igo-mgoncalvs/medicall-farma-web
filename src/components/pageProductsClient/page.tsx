@@ -111,7 +111,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
       </div>
 
       <Image
-        src={width <= 500 ? (banners?.faviritSecoundMobie || "") : (banners?.faviritSecound || '')}
+        src={width <= 500 ? (banners?.faviritSecoundMobile || "") : (banners?.faviritSecound || '')}
         width={100}
         height={100}
         alt=''

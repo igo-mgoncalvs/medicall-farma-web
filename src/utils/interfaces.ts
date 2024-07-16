@@ -43,7 +43,7 @@ export interface IProductsBanners {
   faviritFirst: string
   faviritSecound: string
   faviritFirstMobile: string
-  faviritSecoundMobie: string
+  faviritSecoundMobile: string
   detailsFirst: string
   detailsSecound: string
 }

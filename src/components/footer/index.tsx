@@ -43,7 +43,7 @@ export default function Footer () {
       <div
         className={styles.addressContainer}
       >
-        <a href={addressLink} className={styles.address}><b>Endereço:</b>{` ${address}`}</a>
+        <a href={addressLink} className={styles.address} target="_blank"><b>Endereço:</b>{` ${address}`}</a>
       </div>
     </footer>
   )
