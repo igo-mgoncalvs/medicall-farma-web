@@ -52,3 +52,7 @@ export interface IAddress {
   address: string
   link: string
 }
+
+export interface IContact {
+  link: string
+}

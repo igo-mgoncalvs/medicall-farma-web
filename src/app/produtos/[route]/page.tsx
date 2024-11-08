@@ -6,15 +6,7 @@ import goBack from '@/assets/icons/goBack.svg'
 import styles from './styles.module.css'
 import BASE_URL from '@/hooks/axios'
 import Link from 'next/link'
-
-interface IProduct {
-  id: string,
-  image: string
-  name: string
-  link: string
-  description: string
-  subTitle: string
-}
+import { IProduct } from '@/utils/interfaces'
 
 async function getData({ route } : { route: string }) {
   return BASE_URL.get<IProduct>(`/find-product/${route}`)
@@ -61,7 +53,7 @@ async function ProductsDetails ({ params }: { params: { route: string } }) {
             <div className={styles.buttons_container}>
               <a
                 className={styles.contac_button}
-                href={data.link}
+                href={data.whatsapp}
                 target='_blank'
                 >
                 Entrar em contato

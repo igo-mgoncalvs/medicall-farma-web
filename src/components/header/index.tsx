@@ -12,13 +12,13 @@ import menu from '@/assets/icons/Frame.svg'
 import styles from './styles.module.css'
 import Image from 'next/image';
 import BASE_URL from '@/hooks/axios';
-import { IGroups, ILogos } from '@/utils/interfaces';
+import { IContact, ILogos } from '@/utils/interfaces';
 import CollapseMenuMobile from '../collapseMenuMobile';
 
-
-function Header ({ contact } : { contact: string }) {
+function Header () {
   const [open, setOpen] = useState(false)
   const [logoColor, setLogoColor] = useState<string>('')
+  const [whatsappLink, setWhatsappLink] = useState<string>('')
 
   const pathname = usePathname()
   const navigate = useRouter()
@@ -28,6 +28,11 @@ function Header ({ contact } : { contact: string }) {
     BASE_URL.get<ILogos>('/logos')
       .then(({data}) => {
         setLogoColor(data.logoColor)
+      })
+
+    BASE_URL.get<IContact>('/contact-link')
+      .then(({data}) => {
+        setWhatsappLink(data.link)
       })
   }
   
@@ -140,7 +145,7 @@ function Header ({ contact } : { contact: string }) {
 
         <a
           className={styles.button}
-          href={contact}
+          href={whatsappLink}
           target='_blank'
         >
           Contato

@@ -30,7 +30,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
 
   useEffect(() => {
     setWidth(window.innerWidth)
-  }, [window])
+  }, [])
   
   return (
     <div className={styles.products_container}>
@@ -88,7 +88,7 @@ function PageProductsClient ({ data }: { data: IProduct[] }) {
                   />
                   <a
                     className={styles.product_button_text}
-                    href={product.link}
+                    href={product.whatsapp}
                     target='_blank'
                   >
                     Adquirir

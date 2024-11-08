@@ -11,6 +11,7 @@ import styles from "./page.module.css";
 import 'swiper/css';
 import Image from "next/image";
 
+
 interface IProducts {
   id: string
   name: string
@@ -56,6 +57,7 @@ interface IHome {
 export default function Home() {
   const [data, setData] = useState<IHome>()
   const [productsList, setProductsList] = useState<IProducts[]>()
+
 
   async function getData() { 
     Promise.all([

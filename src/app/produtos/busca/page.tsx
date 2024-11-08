@@ -96,7 +96,7 @@ function ProductFilterCategory({ searchParams }: IProps) {
                   />
                   <a
                     className={styles.product_button_text}
-                    href={product.link}
+                    href={product.whatsapp}
                     target='_blank'
                   >
                     Adquirir

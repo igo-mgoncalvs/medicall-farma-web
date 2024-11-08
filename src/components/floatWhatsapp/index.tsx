@@ -1,13 +1,26 @@
+'use client'
+
 import Image from 'next/image'
 
 import styles from './styles.module.css'
+import { useEffect, useState } from 'react'
+import BASE_URL from '@/hooks/axios'
+import { IContact } from '@/utils/interfaces'
 
-export default function FloatWhatsapp ({ contact } : { contact: string }) {
+export default function FloatWhatsapp () {
+  const [whatsappLink, setWhatsappLink] = useState<string>('')
+  
+  useEffect(() => {
+    BASE_URL.get<IContact>('/contact-link')
+      .then(({data}) => {
+        setWhatsappLink(data.link)
+      })
+  }, [])
 
-  return (
+  return whatsappLink && (
     <a
       className={styles.container}
-      href={contact}
+      href={whatsappLink}
       target='_blank'
     >
       <Image
