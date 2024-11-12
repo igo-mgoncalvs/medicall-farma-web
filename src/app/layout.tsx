@@ -7,6 +7,8 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import FloatWhatsapp from "@/components/floatWhatsapp";
 import { FirebaseAnalytics } from "@/context";
+import Head from "next/head";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ["latin"], variable: '--font-montserrat', display: 'swap', });
@@ -31,7 +33,38 @@ export default async function RootLayout({
 
   return (
     <html lang="pt-br">
+      <Head>
+        {/* Meta Pixel Code */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '1302700400895771');
+                fbq('track', 'PageView');
+              `,
+            }}
+          />
+        {/* End Meta Pixel Code */}       
+      </Head>
       <body className={`${inter.className} ${montserrat.variable}`}>
+        {/* Meta Pixel noscript */}
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src="https://www.facebook.com/tr?id=1302700400895771&ev=PageView&noscript=1"
+              alt="Facebook Pixel"
+            />
+          </noscript>
+        {/* End Meta Pixel noscript */}
         <Header />
         <FirebaseAnalytics>
           <div className="children">
@@ -42,6 +75,7 @@ export default async function RootLayout({
           <Footer />
         </FirebaseAnalytics>
       </body>
+      <GoogleTagManager gtmId="G-QYD9LD360R" /> 
     </html>
   );
 }
