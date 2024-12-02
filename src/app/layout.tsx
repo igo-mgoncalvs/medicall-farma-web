@@ -51,6 +51,17 @@ export default async function RootLayout({
               `,
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'AW-11054079198');
+              `,
+            }}
+          />
         {/* End Meta Pixel Code */}       
       </Head>
       <body className={`${inter.className} ${montserrat.variable}`}>
@@ -76,6 +87,7 @@ export default async function RootLayout({
         </FirebaseAnalytics>
       </body>
       <GoogleTagManager gtmId="G-QYD9LD360R" /> 
+      <GoogleTagManager gtmId="AW-11054079198" /> 
     </html>
   );
 }
